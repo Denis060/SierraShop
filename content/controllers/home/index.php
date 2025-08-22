@@ -21,7 +21,7 @@ $options_saleproduct = [
     'order_by' => 'createDate DESC',
 ];
 $saleoffProducts = getAll('products', $options_saleproduct);
-$title = 'Trang chủ - Quán Chị Kòi';
+$title = 'Home - Sierra Shop';
 $option_slide = [
     'order_by' => 'id asc',
 ];

@@ -8,6 +8,6 @@ $posts = getRecord('posts', $option);
 if (empty($posts)) {
     show404NotFound();
 }
-$title = 'All Posts - Quán Chị Kòi';
+$title = 'All Posts - Sierra Shop';
 //load view
 require('content/views/post/all.php');

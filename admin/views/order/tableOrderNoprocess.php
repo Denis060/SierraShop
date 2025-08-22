@@ -58,8 +58,12 @@ $status = [
                                 <tr>
                                     <td><?= $order['id'] ?></td>
                                     <td><a href="admin.php?controller=order&amp;action=view&amp;order_id=<?= $order['id']; ?>"><?= $order['customer']; ?></a></td>
-                                    <?php if ($order['user_id'] <> 0) : $user_order = getRecord('users', $order['user_id']) ?>
-                                        <td><?= $user_order['user_username'] ?> | <?= $user_order['id'] ?></td>
+                                    <?php if ($order['user_id'] <> 0) : $user_order = getRecord('users', $order['user_id']); ?>
+                                        <?php if ($user_order) : ?>
+                                            <td><?= $user_order['user_username'] ?> | <?= $user_order['id'] ?></td>
+                                        <?php else : ?>
+                                            <td></td>
+                                        <?php endif; ?>
                                     <?php else : ?>
                                         <td></td>
                                     <?php endif; ?>

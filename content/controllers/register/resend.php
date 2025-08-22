@@ -24,13 +24,13 @@ if (!empty($_GET['id'])) {
     try {
         $verificationLink = PATH_URL . "index.php?controller=register&action=activate&code=" . $verificationCode;
         //content
-        $htmlStr = "";
-        $htmlStr .= "Xin chào " . $username . ' (' . $email . "),<br /><br />";
-        $htmlStr .= "Vui lòng nhấp vào nút bên dưới để xác minh đăng ký của bạn và có quyền truy cập vào trang quản trị của Chị Kòi Quán.<br /><br /><br />";
-        $htmlStr .= "<a href='{$verificationLink}' target='_blank' style='padding:1em; font-weight:bold; background-color:blue; color:#fff;'>VERIFY EMAIL</a><br /><br /><br />";
-        $htmlStr .= "Cảm ơn bạn đã tham gia thành một thành viên mới trong website bán hàng của quán Chị Kòi.<br><br>";
-        $htmlStr .= "Trân trọng,<br />";
-        $htmlStr .= "<a href='https://tanhongit.com/' target='_blank'>By Tân Hồng IT</a><br />";
+    $htmlStr = "";
+    $htmlStr .= "Hello " . $username . ' (' . $email . "),<br /><br />";
+    $htmlStr .= "Please click the button below to verify your registration and gain access to the admin page of Chi Koi Shop.<br /><br /><br />";
+    $htmlStr .= "<a href='{$verificationLink}' target='_blank' style='padding:1em; font-weight:bold; background-color:blue; color:#fff;'>VERIFY EMAIL</a><br /><br /><br />";
+    $htmlStr .= "Thank you for becoming a new member of the Chi Koi Shop website.<br><br>";
+    $htmlStr .= "Best regards,<br />";
+    $htmlStr .= "<a href='https://tanhongit.com/' target='_blank'>By Tan Hong IT</a><br />";
         //Server settings
         $mail->CharSet = "UTF-8";
         $mail->SMTPDebug = 0; // Enable verbose debug output (0 : ko hiện debug, 1 hiện)
@@ -53,11 +53,11 @@ if (!empty($_GET['id'])) {
         $mail->AltBody = $htmlStr; //None HTML
         $result = $mail->send();
         if (!$result) {
-            $error = "Có lỗi xảy ra trong quá trình gửi mail";
+            $error = "An error occurred while sending the email";
         }
     } catch (Exception $e) {
         echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
     }
-    echo "<div style='padding-top: 200px' class='container'><div style='text-align: center;' class='alert alert-success'><strong>Done! Mã kích hoạt</strong> đã được gửi đến email: <strong>" . $email . "</strong>. <br><br>Vui lòng mở hộp thư đến email của bạn và nhấp vào liên kết đã cho để bạn có thể đăng nhập.</div></div>";
+    echo "<div style='padding-top: 200px' class='container'><div style='text-align: center;' class='alert alert-success'><strong>Done! The activation code</strong> has been sent to the email: <strong>" . $email . "</strong>. <br><br>Please open your email inbox and click the provided link so you can log in.</div></div>";
     require('content/views/register/result.php');
 }

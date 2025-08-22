@@ -42,6 +42,6 @@ $pagination = pagination($url, $page, $total);
 if ($category['id'] != 0) {
     $breadCrumb = $category['category_name'];
 }
-$title = $category['category_name'] . ' - Quán Chị Kòi';
+$title = $category['category_name'] . ' - Sierra Shop';
 //load view
 require('content/views/shop/index.php');

@@ -34,6 +34,6 @@ $pagination = pagination($url, $page, $total);
 if ($type['id'] != 0) {
     $breadCrumb = $type['type_name'];
 }
-$title = $type['type_name'] . ' - Quán Chị Kòi';
+$title = $type['type_name'] . ' - Sierra Shop';
 //load view
 require('content/views/type/index.php');

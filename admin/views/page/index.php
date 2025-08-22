@@ -58,8 +58,12 @@
                                             <td class="hidden-md-down">
                                                 <?php $user = getRecord('users', $page['post_author']); ?>
                                                 <ul class="list-unstyled team-info margin-0">
-                                                    <li><?= $user['user_name'] ?> </li>
-                                                    <li><img src="public/upload/images/<?= $user['user_avatar'] ?>" alt="Avatar"></li>
+                                                    <?php if ($user) : ?>
+                                                        <li><?= $user['user_name'] ?> </li>
+                                                        <li><img src="public/upload/images/<?= $user['user_avatar'] ?>" alt="Avatar"></li>
+                                                    <?php else : ?>
+                                                        <li><em>User not found</em></li>
+                                                    <?php endif; ?>
                                                 </ul>
                                             </td>
                                             <td>

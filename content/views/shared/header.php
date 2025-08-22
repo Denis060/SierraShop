@@ -46,10 +46,10 @@ if (isset($url_product)) {
 <head>
 	<base href="<?= PATH_URL; ?>" />
 	<meta charset="utf-8">
-	<title><?= isset($title) ? $title : 'Chi Koi Shop'; ?></title>
-	<meta name="keywords" content="Chi Koi Shop - Developed by TanHongIT" />
-	<meta name="description" content="Chi Koi Shop">
-	<meta name="author" content="chikoiquan.com">
+	<title><?= isset($title) ? $title : 'Sierra Shop'; ?></title>
+	<meta name="keywords" content="Sierra Shop - Developed by TanHongIT" />
+	<meta name="description" content="Sierra Shop">
+	<meta name="author" content="sierrashop.com">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel=icon href="<?= PATH_URL ?>public/img/<?= $favicon ?>" sizes="32x32">
 	<link rel="shortcut icon" href="<?= PATH_URL ?>public/img/<?= $favicon ?>" type="image/x-icon" />

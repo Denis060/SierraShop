@@ -12,7 +12,7 @@
                 <div class="col-lg-7 col-md-6 col-sm-12">
                     <h2>User</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> ChiKoi</a></li>
+                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> SierraShop</a></li>
                         <li class="breadcrumb-item"><a href="admin.php?controller=backupdb">BackUp</a></li>
                         <li class="breadcrumb-item active">Backup database</li>
                     </ul>
@@ -29,7 +29,7 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="header">
-                            <h2><strong>Truy Xuất Dữ Liệu</strong> "Backup database" </h2>
+                            <h2><strong>Data Retrieval</strong> "Backup database" </h2>
                             <ul class="header-dropdown">
                                 <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
                                     <ul class="dropdown-menu dropdown-menu-right slideUp">
@@ -46,16 +46,16 @@
                                 <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                                     <thead>
                                         <tr>
-                                            <th>STT</th>
-                                            <th>Tên file CSDL đã backup</th>
-                                            <th>Hành động</th>
+                                            <th>No.</th>
+                                            <th>Backup Database Filename</th>
+                                            <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>STT</th>
-                                            <th>Tên file CSDL đã backup</th>
-                                            <th>Hành động</th>
+                                            <th>No.</th>
+                                            <th>Backup Database Filename</th>
+                                            <th>Action</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -72,7 +72,7 @@ foreach (new DirectoryIterator('admin/database') as $filename) :
                                                 <td>
                                                     <form action="admin.php?controller=backupdb&action=delete" method="post">
                                                         <input type="hidden" name="linkFile" value="<?= $link_connect_file ?>">
-                                                        <button onclick="return confirm('Are you sure to delete?')" title="Delete file" class="btn btn-danger btn-round" type="submit"> <i class="zmdi zmdi-delete"></i> Xóe</button>
+                                                        <button onclick="return confirm('Are you sure to delete?')" title="Delete file" class="btn btn-danger btn-round" type="submit"> <i class="zmdi zmdi-delete"></i> Delete</button>
                                                     </form>
                                                 </td>
                                             </tr>

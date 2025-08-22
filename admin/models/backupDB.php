@@ -23,10 +23,10 @@ function backup_db()
             while ($row = mysqli_fetch_row($result)) {
                 $return .= 'INSERT INTO ' . $table . ' VALUES(';
                 for ($j = 0; $j < $num_fields; $j++) {
-                    $row[$j] = addslashes($row[$j]);
-                    $row[$j] = str_replace("\n", "\\n", $row[$j]);
-                    if (isset($row[$j])) {
-                        $return .= '"' . $row[$j] . '"';
+                    if ($row[$j] !== null) {
+                        $value = addslashes($row[$j]);
+                        $value = str_replace("\n", "\\n", $value);
+                        $return .= '"' . $value . '"';
                     } else {
                         $return .= '""';
                     }
@@ -48,7 +48,7 @@ function backup_db()
     chmod($folder, 0777);
     // Đặt tên file
     $date = date('Y-m-d-H-i-s', time() + 7 * 3600);
-    $filename = $folder . "db-backup-tanhongit-" . $date;
+    $filename = $folder . "db-backup-SierraShop-" . $date;
     //Tạo file .sql
     $handle = fopen($filename . '.sql', 'w+');
     fwrite($handle, ($return));

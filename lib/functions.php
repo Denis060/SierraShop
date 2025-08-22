@@ -36,9 +36,9 @@ function pagination(string $url, $page, $total): string
 
     //first
     if ($page == 1) {
-        $out .= '<li class="disabled"><span>Đầu</span></li>';
+        $out .= '<li class="disabled"><span>First</span></li>';
     } else {
-        $out .= '<li><a href="' . $url . '">Đầu</a></li>';
+        $out .= '<li><a href="' . $url . '">First</a></li>';
     }
 
     // previous
@@ -70,9 +70,9 @@ function pagination(string $url, $page, $total): string
 
     //last
     if ($page < $total) {
-        $out .= '<li><a href="' . $url . '&amp;page=' . $total . '">Cuối</a></li>';
+        $out .= '<li><a href="' . $url . '&amp;page=' . $total . '">Last</a></li>';
     } else {
-        $out .= '<li class="disabled"><span>Cuối</span></li>';
+        $out .= '<li class="disabled"><span>Last</span></li>';
     }
 
     $out .= '</ul>';
@@ -193,9 +193,9 @@ function adminPagination(string $url, $page, $total): string
 
     //first
     if ($page == 1) {
-        $out .= '<li class="page-item disabled"><span class="page-link">Đầu</span></li>';
+        $out .= '<li class="page-item disabled"><span class="page-link">First</span></li>';
     } else {
-        $out .= '<li class="page-item"><a style="color: blueviolet" class="page-link" href="' . $url . '">Đầu</a></li>';
+        $out .= '<li class="page-item"><a style="color: blueviolet" class="page-link" href="' . $url . '">First</a></li>';
     }
 
     // previous
@@ -227,9 +227,9 @@ function adminPagination(string $url, $page, $total): string
 
     //last
     if ($page < $total) {
-        $out .= '<li class="page-item"><a style="color: blueviolet" class="page-link" href="' . $url . '&amp;page=' . $total . '">Cuối</a></li>';
+        $out .= '<li class="page-item"><a style="color: blueviolet" class="page-link" href="' . $url . '&amp;page=' . $total . '">Last</a></li>';
     } else {
-        $out .= '<li class="page-item disabled"><span class="page-link">Cuối</span></li>';
+        $out .= '<li class="page-item disabled"><span class="page-link">Last</span></li>';
     }
     $out .= '</ul>';
     return $out;

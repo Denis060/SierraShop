@@ -14,7 +14,7 @@ if (!$page || $page['post_status'] <> 'Published') {
 } else {
     updateCountView($postId);
 }
-$title = $page['post_title'] . ' - Quán Chị Kòi';
+$title = $page['post_title'] . ' - Sierra Shop';
 $url_product = 'page/' . $page['id'] . '-' . $page['post_slug'];
 $image_product = PATH_URL . 'public/upload/ckeditorimages/' . $page['post_avatar'];
 //load view

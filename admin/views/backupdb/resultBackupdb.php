@@ -12,7 +12,7 @@
                 <div class="col-lg-7 col-md-6 col-sm-12">
                     <h2><?php ?></h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> ChiKoi</a></li>
+                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> SierraShop</a></li>
                         <li class="breadcrumb-item"><a href="admin.php?controller=backupdb">BackUp</a></li>
                         <li class="breadcrumb-item active">Backup Database</li>
                     </ul>
@@ -27,17 +27,17 @@
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="alert alert-warning" role="alert">
-                        <strong>Bạn đang trong trang "Backup Database CSDL", Hãy cẩn trọng!!! <a target="_blank" href="#"> Xem tài liệu hướng dẫn</a>
+                        <strong>You are on the "Database Backup" page. Please be careful! <a target="_blank" href="#"> View the documentation</a>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true"><i class="zmdi zmdi-close"></i></span>
                             </button>
                     </div>
                     <div class="card">
                         <div class="body">
-                            <h1 style="text-align: center; font-weight:bold;">Đã tạo bản backup CSDL thành công. Còn chần chờ gì mà không tự tìm đến nơi chưa file sql để tải về đi chứ! (Đặc quyền cho Admin vào được host)</h1>
+                            <h1 style="text-align: center; font-weight:bold;">Database backup created successfully. Go to the folder containing the SQL file to download it! (Only Admins with host access can do this)</h1>
                             <hr>
                             <div style="text-align: center;">
-                                <a class="btn btn-primary waves-effect" href="admin.php?controller=backupdb&action=list">Xem lịch sử backup CSDL</a>
+                                <a class="btn btn-primary waves-effect" href="admin.php?controller=backupdb&action=list">View Backup History</a>
                             </div>
                         </div>
                     </div>

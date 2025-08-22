@@ -2,7 +2,7 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="header">
-                <h2>Truy Xuất Dữ Liệu <strong>"Tổng bình luận"</strong> </h2>
+                <h2>Data Retrieval <strong>"Total Comments"</strong> </h2>
                 <ul class="header-dropdown">
                     <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
                         <ul class="dropdown-menu dropdown-menu-right slideUp">
@@ -22,14 +22,14 @@
                     <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                         <thead>
                             <tr>
-                                <th>Bình luận</th>
-                                <th>Hành Động</th>
+                                <th>Comment</th>
+                                <th>Action</th>
                             </tr>
                         </thead>
                         <tfoot>
                             <tr>
-                                <th>Bình luận</th>
-                                <th>Hành Động</th>
+                                <th>Comment</th>
+                                <th>Action</th>
                             </tr>
                         </tfoot>
                         <tbody>

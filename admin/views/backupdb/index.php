@@ -12,7 +12,7 @@
                 <div class="col-lg-7 col-md-6 col-sm-12">
                     <h2><?php ?></h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> ChiKoi</a></li>
+                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> SierraShop</a></li>
                         <li class="breadcrumb-item"><a href="admin.php?controller=backupdb">BackUp</a></li>
                         <li class="breadcrumb-item active">Backup Database</li>
                     </ul>
@@ -28,7 +28,7 @@
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="alert alert-warning" role="alert">
-                        <strong>Bạn đang trong trang "Backup Database CSDL", Hãy cẩn trọng!!! <a target="_blank" href="#"> Xem tài liệu hướng dẫn</a>
+                        <strong>You are on the "Database Backup" page. Please be careful! <a target="_blank" href="#"> View the documentation</a>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true"><i class="zmdi zmdi-close"></i></span>
                             </button>
@@ -36,13 +36,13 @@
                     <div class="card">
                         <div class="body">
                             <form id="product-form" class="form-horizontal" method="post" action="admin.php?controller=backupdb" enctype="multipart/form-data" role="form">
-                                <h1 style="text-align: center; font-weight:bold;">Hiện tại bạn đang ở trong trang thực hiện backup lại cơ sở dữ liệu của website này</h1>
+                                <h1 style="text-align: center; font-weight:bold;">You are currently on the page to back up this website's database</h1>
                                 <hr>
-                                <h1 style="text-align: center; font-weight:bold;">Bạn có chắc rằng bạn muốn lưu lại bản backup DataBase? Hãy lựa chọn !!!</h1>
+                                <h1 style="text-align: center; font-weight:bold;">Are you sure you want to save a backup of the database? Please choose!</h1>
                                 <div class="form-group" style="text-align: center;">
                                 <input type="text" hidden name="backup_database">
-                                    <button class="btn btn-primary waves-effect" type="submit">Có! Bắt đầu tạo bản Backup</button>
-                                    <a class="btn btn-warning waves-effect" href="admin.php">Không! Trở về</a>
+                                    <button class="btn btn-primary waves-effect" type="submit">Yes! Start Backup</button>
+                                    <a class="btn btn-warning waves-effect" href="admin.php">No! Go Back</a>
                                 </div>
                             </form>
                         </div>

@@ -10,7 +10,7 @@
         <div class="block-header">
             <div class="row">
                 <div class="col-lg-7 col-md-6 col-sm-12">
-                    <h2>Trả lời quan email về phản hồi</h2>
+                    <h2>Reply to Feedback Email</h2>
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> ChiKoi</a></li>
                         <li class="breadcrumb-item"><a href="admin.php?controller=feedback">Feedback</a></li>
@@ -26,33 +26,33 @@
         <div class="container-fluid">
             <!-- Basic Examples -->
             <div class="row clearfix">
-                <h2 style="font-weight: bold;">Gửi Email trả lời phản hồi</h2>
+                <h2 style="font-weight: bold;">Send Email Reply to Feedback</h2>
                 <div class="col-lg-12">
                     <div class="row clearfix">
                         <div class="col-sm-4">
                             <div class="form-group">
-                                <h5>Tên người gửi phản hồi</h5>
-                                <input name="name" type="text" disabled value="<?= $feedback ? $feedback['name'] : ''; ?>" class="form-control" id="name" placeholder="họ và tên thật..." required="" />
+                                <h5>Feedback Sender Name</h5>
+                                <input name="name" type="text" disabled value="<?= $feedback ? $feedback['name'] : ''; ?>" class="form-control" id="name" placeholder="Full name..." required="" />
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
-                                <h5>Email của người gửi phản hồi</h5>
-                                <input name="email" type="text" disabled value="<?= $feedback ? $feedback['email'] : ''; ?>" class="form-control" id="color" placeholder="Nhập email của bạn..." required="" />
+                                <h5>Feedback Sender Email</h5>
+                                <input name="email" type="text" disabled value="<?= $feedback ? $feedback['email'] : ''; ?>" class="form-control" id="color" placeholder="Enter your email..." required="" />
                             </div>
                         </div>
                         <div class="col-sm-4">
                             <div class="form-group">
-                                <h5>SĐT của người gửi phản hồi</h5>
+                                <h5>Feedback Sender Phone</h5>
                                 <input name="phone" type="text" disabled value="<?= $feedback ? $feedback['phone'] : ''; ?>" class="form-control" id="totalview" required placeholder="0123456789..." />
                             </div>
                         </div>
                     </div>
-                    <h4 class="card-inside-title" style="font-weight:bold;">Nội dung của người đã phản hồi:</h4>
+                    <h4 class="card-inside-title" style="font-weight:bold;">Feedback Content:</h4>
                     <div class="row clearfix">
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <textarea name="subject" disabled type="text" class="form-control" id="totalview" required placeholder="Nội dung phản hồi..."><?= $feedback ? $feedback['subject'] : ''; ?></textarea>
+                                <textarea name="subject" disabled type="text" class="form-control" id="totalview" required placeholder="Feedback content..."><?= $feedback ? $feedback['subject'] : ''; ?></textarea>
                             </div>
                         </div>
                     </div>
@@ -62,14 +62,14 @@
                         <div class="row clearfix">
                             <div class="col-sm-12">
                                 <div class="form-group">
-                                    <textarea name="html-content" id="ckeditor" autofocus type="text" class="form-control" rows="20" required placeholder="Nhập nội dung trả lời phản hồi..."> </textarea>
+                                    <textarea name="html-content" id="ckeditor" autofocus type="text" class="form-control" rows="20" required placeholder="Enter reply content..."> </textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group" style="text-align: center;">
-                            <button onclick="return confirm('Bạn có chắc muốn gửi?')" class="btn btn-primary waves-effect" type="submit">Gửi trả lời</button>
-                            <a class="btn btn-warning waves-effect" href="admin.php?controller=feedback">Trở về</a>
-                            <a class="btn btn-success waves-effect" href="admin.php?controller=feedback&action=view&feedback_id=<?= $feedback['id'] ?>">Xem lại chi tiết phản hồi này</a>
+                            <button onclick="return confirm('Are you sure you want to send?')" class="btn btn-primary waves-effect" type="submit">Send Reply</button>
+                            <a class="btn btn-warning waves-effect" href="admin.php?controller=feedback">Go Back</a>
+                            <a class="btn btn-success waves-effect" href="admin.php?controller=feedback&action=view&feedback_id=<?= $feedback['id'] ?>">View Feedback Details</a>
                         </div>
                     </form>
                 </div>

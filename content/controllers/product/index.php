@@ -14,7 +14,7 @@ if (!$product) {
 } else {
     updateCountView($productId);
 }
-$title = $product['product_name'] . ' - Quán Chị Kòi';
+$title = $product['product_name'] . ' - Sierra Shop';
 $image_product = PATH_URL . 'public/upload/products/' . $product['img1'];
 $url_product = 'product/' . $product['id'] . '-' . $product['slug'];
 $categories = getAll('categories', [

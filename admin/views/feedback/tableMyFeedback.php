@@ -2,7 +2,7 @@
     <div class="col-lg-12">
         <div class="card">
             <div class="header">
-                <h2>Truy Xuất Dữ Liệu <strong>"Your Feedback"</strong> </h2>
+                <h2>Data Retrieval <strong>"Your Feedback"</strong> </h2>
                 <ul class="header-dropdown">
                     <li class="remove">
                         <a role="button" class="boxs-close"><i class="zmdi zmdi-close"></i></a>
@@ -14,22 +14,22 @@
                     <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                         <thead>
                             <tr>
-                                <th>STT</th>
+                                <th>No.</th>
                                 <th>Name</th>
                                 <th>Time</th>
                                 <th>Email</th>
-                                <th>SĐT</th>
-                                <th>Nội dung</th>
+                                <th>Phone</th>
+                                <th>Content</th>
                             </tr>
                         </thead>
                         <tfoot>
                             <tr>
-                                <th>STT</th>
+                                <th>No.</th>
                                 <th>Name</th>
                                 <th>Time</th>
                                 <th>Email</th>
-                                <th>SĐT</th>
-                                <th>Nội dung</th>
+                                <th>Phone</th>
+                                <th>Content</th>
                             </tr>
                         </tfoot>
                         <tbody>
