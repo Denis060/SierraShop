@@ -12,6 +12,8 @@ if (!empty($_POST)) {
         'createtime' => gmdate('Y-m-d H:i:s', time() + 7 * 3600),
         'message' => escape($_POST['message']),
         'user_id' => intval($_POST['user_id']),
+        'payment_method' => isset($_POST['payment_method']) ? escape($_POST['payment_method']) : 'cod',
+        'payment_status' => 'pending',
     ];
     $orderId = save('orders', $order);
 

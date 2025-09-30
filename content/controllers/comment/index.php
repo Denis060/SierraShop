@@ -18,7 +18,7 @@ if (!empty($_POST)) {
     }
     
     save('comments', $commentData);
-    echo "<div class='alert alert-success'><strong>Done!</strong> Bạn đã ghi lời bình luận của bạn lại thành công !! <br>Hãy <a href='javascript: history.go(-1)'>Trở lại sản phẩm</a> hoặc <a href='index.php'>Đến trang chủ</a></div>";
+    echo "<div class='alert alert-success'><strong>Done!</strong> Your comment has been successfully posted! <br><a href='javascript: history.go(-1)'>Back to product</a> or <a href='index.php'>Go to homepage</a></div>";
 }
 require('content/views/comment/index.php');
 

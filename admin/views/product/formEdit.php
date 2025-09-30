@@ -221,11 +221,11 @@
                                             <?php else : ?>
                                                 <div class="radio inlineblock m-r-20">
                                                     <input type="radio" name="status" id="male" class="with-gap" value="1">
-                                                    <label for="male">Bật giảm giá</label>
+                                                    <label for="male">Enable Discount</label>
                                                 </div>
                                                 <div class="radio inlineblock">
                                                     <input type="radio" name="status" id="Female" class="with-gap" checked value="0">
-                                                    <label for="Female">Không giảm giá</label>
+                                                    <label for="Female">No Discount</label>
                                                 </div>
                                             <?php endif; ?>
                                         </div>
@@ -279,7 +279,7 @@
                                                 <?php if (strlen($product['img2']) <> 0) { ?>
                                                     <img style="max-width:250px;" src="public/upload/products/<?= $product['img2']; ?>">
                                                 <?php } else {
-                                                    echo '<h6>Vị trí này chưa có ảnh</h6>';
+                                                    echo '<h6>No image in this position</h6>';
                                                 } ?>
                                             </div>
                                         </div>
@@ -289,7 +289,7 @@
                                                 <?php if (strlen($product['img3']) <> 0) { ?>
                                                     <img style="max-width:250px;" src="public/upload/products/<?= $product['img3']; ?>">
                                                 <?php } else {
-                                                    echo '<h6>Vị trí này chưa có ảnh</h6>';
+                                                    echo '<h6>No image in this position</h6>';
                                                 } ?>
                                             </div>
                                         </div>

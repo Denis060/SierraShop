@@ -26,9 +26,9 @@ if (!empty($_GET['id'])) {
         //content
     $htmlStr = "";
     $htmlStr .= "Hello " . $username . ' (' . $email . "),<br /><br />";
-    $htmlStr .= "Please click the button below to verify your registration and gain access to the admin page of Chi Koi Shop.<br /><br /><br />";
+    $htmlStr .= "Please click the button below to verify your registration and gain access to the admin page of SierraShop Shop.<br /><br /><br />";
     $htmlStr .= "<a href='{$verificationLink}' target='_blank' style='padding:1em; font-weight:bold; background-color:blue; color:#fff;'>VERIFY EMAIL</a><br /><br /><br />";
-    $htmlStr .= "Thank you for becoming a new member of the Chi Koi Shop website.<br><br>";
+    $htmlStr .= "Thank you for becoming a new member of the SierraShop Shop website.<br><br>";
     $htmlStr .= "Best regards,<br />";
     $htmlStr .= "<a href='https://tanhongit.com/' target='_blank'>By Tan Hong IT</a><br />";
         //Server settings

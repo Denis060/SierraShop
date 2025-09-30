@@ -10,13 +10,13 @@ if (!empty($userNav)) {
         'order_by' => 'createtime DESC',
     ];
     $orders = getAll('orders', $options);
-    $title = 'Tất cả đơn hàng của bạn';
+    $title = 'All Your Orders';
     $yourPurchaseNav = 'class="active open"';
     $status = [
-        0 => 'Đã xác nhận đơn hàng',
-        2 => 'Đang giao hàng',
-        1 => 'Đã giao hàng',
-        3 => 'Đơn hàng đã hủy',
+        0 => 'Order Confirmed',
+        2 => 'In Delivery',
+        1 => 'Delivered',
+        3 => 'Order Cancelled',
     ];
 }
 

@@ -1,15 +1,15 @@
-# Welcome to New PHP MVC by TANHONGIT
+# SierraShop - Modern E-commerce Platform
+### Enhanced PHP MVC E-commerce Solution
 
-The NEW-MVC-SHOP is a free e-commerce website project for everyone to use. It is built in pure PHP language. And anyone can use it.
-- Customers do not need to know much about technology.
-- Powerful system, many useful functions.
-- Easy to access, easy to use.
-
-## Support the project
-Support this project :stuck_out_tongue_winking_eye: :pray:
-<p align="center">
-    <a href="https://www.paypal.me/tanhongcom" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-green.svg" data-origin="https://img.shields.io/badge/Donate-PayPal-green.svg" alt="PayPal buymeacoffee TanHongIT"></a>
-</p>
+SierraShop is a modern, secure, and feature-rich e-commerce platform built with PHP MVC architecture.
+Originally based on NEW-MVC-SHOP, a free e-commerce project by SaloneTek, this enhanced version includes:
+- **Enhanced security features** with improved authentication and authorization
+- **Modern UI/UX design** with fully English interface
+- **Improved email system** with automatic SMTP failover
+- **Enhanced accessibility** and user experience
+- **Comprehensive documentation** and setup guides
+- **Performance optimizations** and code improvements
+- **Complete internationalization** from Vietnamese to English
 
 # 1. Configuration requirements
 > - Web Server: Apache
@@ -22,48 +22,73 @@ Support this project :stuck_out_tongue_winking_eye: :pray:
 # 2. Technology
 - Pure PHP language
 
-# 3. Feature
+# 3. Key Features & Recent Improvements
 
+## 3.1 Frontend Features
 ```
-1. FRONT-END
-    - Shopping cart
-    - Save cart with database
-    - Customer login
-    - Content: Page, Post, Product List, Product Details, Category,...
-    - Product attributes: cost price, promotion price, detail,...
-    - Feedback, Feedback for product, Feedback for order
-    - Comment on Product, Post,...
-    - Search, pagination,...
-    - Checkout, PlaceOrder,...
-    ...
+✅ Shopping cart with persistent storage
+✅ Customer login and registration system
+✅ Product catalog with categories and search
+✅ Product details with multiple images
+✅ Customer feedback and review system
+✅ Order tracking and management
+✅ Responsive design for all devices
+✅ SEO-optimized pages
+✅ Secure checkout process
+✅ Password reset functionality with email verification
+```
 
-=================================================================
+## 3.2 Backend Admin Features
+```
+✅ Complete admin dashboard in English
+✅ User role management (Admin/Moderator/User)
+✅ Product management (CRUD operations)
+✅ Category management system
+✅ Order processing and tracking
+✅ Customer feedback management
+✅ User account management
+✅ Database backup functionality
+✅ Media gallery management
+✅ Template and content management
+✅ Comment moderation system
+```
 
-2. BACKEND-ADMIN
-    - Admin roles, permission
-    - Product manager   (Create, delete, update)
-    - Category manager  (Create, delete, update)
-    - Order management  (Create, delete, update)
-    - Comment manager   (Create, delete, update)
-    - Feedback manager  (Create, delete, update)
-    - User management   (Create, delete, update)
-    - Template manager  (Create, update)
-    - Backup database 
-    ...
+## 3.3 Recent Enhancements
+```
+🔧 Email System Improvements:
+   - Automatic SMTP failover mechanism
+   - Multiple email provider support
+   - Enhanced error handling and logging
+   
+🌐 Complete Interface Translation:
+   - Full Vietnamese to English translation
+   - Consistent terminology throughout
+   - Professional admin interface
+   
+🔒 Security Enhancements:
+   - Improved authentication system
+   - Better error handling
+   - Enhanced validation
+   
+📱 User Experience:
+   - Modernized admin interface
+   - Improved navigation
+   - Better responsive design
 ```
 
 # 4. Download Database
 
-This is the path to the database file for you to download: [`/admin/database/***.sql`](https://github.com/TanHongIT/new-mvc-shop/tree/master/admin/database)
+This is the path to the database file for you to download: [`/admin/database/***.sql`](https://github.com/Denis060/SierraShop/tree/main/admin/database)
 
 Create a new database on **PHPMyAdmin** at your server, then import the .sql file that you just downloaded.
 
-# 5. Request configuration
+# 5. Quick Start Guide
 
 Clone the project to your computer:
 
 ```bash
-git clone https://github.com/tanhongit/new-mvc-shop.git
+git clone https://github.com/Denis060/SierraShop.git
+cd SierraShop
 ```
 
 Copy the .env.example file to .env:
@@ -94,14 +119,14 @@ PATH_URL_IMG_PRODUCT=public/upload/products/
 
 > **Note:**
 > 
-> The path of the config file that is using these environment variables is located at: [`/lib/config/config.php`](https://github.com/TanHongIT/new-mvc-shop/tree/master/lib/config/config.php)
+> The path of the config file that is using these environment variables is located at: [`/lib/config/config.php`](https://github.com/Denis060/SierraShop/tree/main/lib/config/config.php)
 
 ## 6.2 Edit Connect Database
 
 You need to change the connection information and import sql file to the database after you have cloned my repository so that the website can work.
 
 This is the path to the sql file for you to import to your database:
-[`/admin/database/***.sql`](https://github.com/TanHongIT/new-mvc-shop/tree/master/admin/database)
+[`/admin/database/***.sql`](https://github.com/Denis060/SierraShop/tree/main/admin/database)
 
 And change the connection information to match your database in .env file:
 
@@ -115,7 +140,7 @@ DB_NAME=new_mvc_shop_db
 
 > **Note:**
 >
-> The path of the database config file that is using these environment variables is located at: [`/lib/config/database.php`](https://github.com/TanHongIT/new-mvc-shop/tree/master/lib/config/database.php)
+> The path of the database config file that is using these environment variables is located at: [`/lib/config/database.php`](https://github.com/Denis060/SierraShop/tree/main/lib/config/database.php)
 
 ## 6.3 Edit .htaccess
 
@@ -139,29 +164,44 @@ RewriteBase /
 > RewriteBase /new-mvc-shop/
 > ```
 
-## 6.4 Edit SMTP Mail
+## 6.4 Email Configuration (Enhanced)
 
-> The third thing: 
-You need to change the information about **SMTP Mail** to be able to use some functions about user account authentication, change passwords, notify users, ...
+> **Enhanced Email System with Automatic Failover**
+> 
+SierraShop now includes an improved email system with automatic failover support for better reliability.
 
 Update the following information in the **.env** file:
 
 ```dotenv
+# Primary SMTP Configuration
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=465
-SMTP_UNAME=add_your_mail
-SMTP_PWORD=add_your_application_password_from_your_mail
+SMTP_UNAME=your_primary_email@gmail.com
+SMTP_PWORD=your_app_password
+
+# Fallback SMTP Configuration (Optional but recommended)
+SMTP_HOST_FALLBACK=smtp-mail.outlook.com
+SMTP_PORT_FALLBACK=587
+SMTP_UNAME_FALLBACK=your_backup_email@outlook.com
+SMTP_PWORD_FALLBACK=your_backup_password
 ```
 
-Change the value of the constant **SMTP_UNAME** and **SMTP_PWORD** to match the configuration you added on your Gmail.
+### Key Features:
+- **Automatic Failover**: If primary SMTP fails, system automatically tries fallback
+- **Enhanced Security**: TLS encryption and secure authentication
+- **Better Error Handling**: Detailed logging for troubleshooting
+- **Multiple Provider Support**: Gmail, Outlook, and other SMTP providers
 
-Tips: https://support.google.com/accounts/answer/185833?hl=en
-
-**Where SMTP_PWORD is the application password for your _gmail.com_ account.**
+**Gmail Setup Tips:**
+1. Enable 2-factor authentication
+2. Generate app-specific password: https://support.google.com/accounts/answer/185833
+3. Use the app password as SMTP_PWORD
 
 > **Note:**
 >
-> The path of the email config file that is using these environment variables is located at: [`/lib/config/sendmail.php`](https://github.com/TanHongIT/new-mvc-shop/tree/master/lib/config/sendmail.php)
+> The enhanced email configuration files are located at:
+> - Primary config: [`/lib/config/sendmail.php`](lib/config/sendmail.php)
+> - Email helper: [`/lib/email_helper.php`](lib/email_helper.php)
 
 # 7. Install with Docker (Optional)
 
@@ -221,51 +261,93 @@ docker compose run --rm -w /var/www/html server composer install
 
 Finally, you need to import the database file into the database container.
 
-# 8. Demo
+# 8. Demo & Default Accounts
 
-1. Front-End: [https://chikoiquan.tanhongit.com](https://chikoiquan.tanhongit.com)
-2. Back-End: [https://chikoiquan.tanhongit.com/admin.php](https://chikoiquan.tanhongit.com/admin.php)
+## Live Demo
+- **Frontend**: Coming Soon (SierraShop Demo)
+- **Backend Admin**: Coming Soon (SierraShop Admin Demo)
 
-> **_Account login on Backend_**
+## Default Login Accounts
+
+> **_Default accounts for testing (please change in production)_**
 > 
 > ```
-> user :
+> Regular User:
 >     username: testna      | email: test@gmail.com        | password: 123456789
 >     username: tanhongitii | email: meowwww@gmail.com.com | password: 123456789
-> Mod :
+> 
+> Moderator:
 >     username: eyteyt      | email: moderator@gmail.com   | password: 12345678
 > 
-> Admin:
+> Administrator:
 >     username: admin       | email: admin@gmail.com       | password: 1234567890
+>     username: admin3      | email: admin3@gmail.com      | password: 123456789
 > ```
+
+⚠️ **Security Notice**: Change all default passwords before deploying to production!
 
 # Demo Images
 
-**HomePage**
+**SierraShop Homepage**
 
 ![Image](https://imgur.com/rncleZ0.png)
 
 ---
 
-**Slide of Homepage**
-
-![Image](https://imgur.com/uI1Umba.png)
-
----
-
-**Product Page**
+**Product Catalog**
 
 ![Image](https://imgur.com/ExdAptJ.png)
 
 ---
 
-**Admin Manager Page**
+**Enhanced Admin Dashboard (Now in English)**
 
 ![Image](https://imgur.com/xOpAmb4.png)
 
 ![Image](https://imgur.com/u8lXnsz.png)
 
 ---
+
+# 9. Changelog & Improvements
+
+## Version 2.0 (Latest)
+- ✅ **Complete Interface Translation**: Full Vietnamese to English localization
+- ✅ **Enhanced Email System**: Automatic SMTP failover with multiple provider support
+- ✅ **Security Improvements**: Better authentication and error handling
+- ✅ **Admin Interface Modernization**: Professional English admin panel
+- ✅ **Code Quality**: Improved documentation and code structure
+- ✅ **User Experience**: Better navigation and responsive design
+
+## Previous Features
+- ✅ PHP MVC Architecture
+- ✅ Shopping Cart System
+- ✅ User Management
+- ✅ Product & Category Management
+- ✅ Order Processing
+- ✅ Feedback System
+- ✅ Database Backup Tools
+
+---
+
+# 10. Contributing
+
+We welcome contributions to SierraShop! Please feel free to submit issues, feature requests, or pull requests.
+
+## Development Guidelines
+1. Follow PSR coding standards
+2. Write clear commit messages
+3. Test your changes thoroughly
+4. Update documentation as needed
+
+---
+
+# 11. License & Support
+
+## Support the Project
+If you find SierraShop useful, consider supporting the original project:
+<p align="center">
+    <a href="https://www.paypal.me/tanhongcom" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-green.svg" data-origin="https://img.shields.io/badge/Donate-PayPal-green.svg" alt="PayPal Support"></a>
+</p>
 
 <p align="center">
      <img src="https://img.shields.io/packagist/l/doctrine/orm.svg" data-origin="https://img.shields.io/packagist/l/doctrine/orm.svg" alt="license">

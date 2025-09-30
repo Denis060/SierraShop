@@ -14,9 +14,9 @@ if (isset($_POST['id'])) {
     $user = getRecord('users', $id);
     $email = $user['user_email'];
     if ($newpassword == $user['user_password']) {
-        echo "<div style='padding-top: 200px' class='container'><div class='alert alert-danger' style='text-align: center;'><strong>NO!</strong> Việc thay đổi mật khẩu có vấn đề. Mật khẩu mới của bạn vừa nhập là mật khẩu của bạn hiện tại đó. <br><br>Bạn đã nhớ lại mật khẩu của mình chưa <i class='zmdi zmdi-favorite'></i> !! <br><a href='javascript: history.go(-1)'>Trở lại</a> hoặc <a href='index.php'>Đến trang chủ</a></div></div>";
+        echo "<div style='padding-top: 200px' class='container'><div class='alert alert-danger' style='text-align: center;'><strong>Error!</strong> The password change could not be completed. The new password you entered is the same as your current password. <br><br>Have you remembered your password <i class='zmdi zmdi-favorite'></i> ? <br><a href='javascript: history.go(-1)'>Go back</a> or <a href='index.php'>Go to homepage</a></div></div>";
     } elseif (strlen($_POST['newpassword']) < 8) {
-        echo "<div style='padding-top: 200px' class='container'><div style='text-align: center;' class='alert alert-danger'><strong>NO!</strong> Việc thay đổi mật khẩu thất bại. Mật khẩu bạn nhập phải dài từ 8 ký tự trở lên !! <br><a href='javascript: history.go(-1)'>Trở lại</a> hoặc <a href='index.php'>Đến Trang chủ</a></div></div>";
+        echo "<div style='padding-top: 200px' class='container'><div style='text-align: center;' class='alert alert-danger'><strong>Error!</strong> Password change failed. Your password must be at least 8 characters long! <br><a href='javascript: history.go(-1)'>Go back</a> or <a href='index.php'>Go to homepage</a></div></div>";
     } elseif ($newpassword == $confirmNewPassword) {
         $options = [
             'id' => $id,
@@ -65,7 +65,7 @@ if (isset($_POST['id'])) {
         }
         echo '<div style="padding-top: 200px" class="container"><div class="alert alert-success" style="text-align: center;"><strong>Tốt!</strong> Bạn đã thay đổi mật khẩu thành công. Và một tin nhắn thông báo đã được gửi đến Email của người dùng này. Hãy đến trang <a href="admin.php?controller=home&action=login">Đăng nhập</a> và đăng nhập lại.!!</div></div>';
     } else {
-        echo "<div style='padding-top: 200px' class='container'><div class='alert alert-danger' style='text-align: center;'><strong>NO!</strong> Việc thay đổi mật khẩu có vấn đề. Ô nhập xác thực mật khẩu không đúng với mật khẩu mới mà bạn nhập vào !! <br><a href='javascript: history.go(-1)'>Trở lại</a> hoặc <a href='index.php'>Đến trang chủ</a></div></div>";
+        echo "<div style='padding-top: 200px' class='container'><div class='alert alert-danger' style='text-align: center;'><strong>Error!</strong> Password change failed. The password confirmation does not match the new password you entered! <br><a href='javascript: history.go(-1)'>Go back</a> or <a href='index.php'>Go to homepage</a></div></div>";
     }
 }
 require('content/views/forgot-password/result.php');

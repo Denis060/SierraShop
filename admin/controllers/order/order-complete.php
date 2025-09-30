@@ -8,11 +8,11 @@ $options = [
 ];
 $orderComplete = getAll('orders', $options);
 
-$title = 'Đơn hàng đã xử lý';
+$title = 'Processed Orders';
 $orderNav = 'class="active open"';
 $status = [
-    0 => 'Chưa xử lý',
-    1 => 'Đã xử lý',
-    2 => 'Đang xử lý',
+    0 => 'Not Processed',
+    1 => 'Processed',
+    2 => 'In Process',
 ];
 require('admin/views/order/order-complete.php');

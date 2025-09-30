@@ -12,7 +12,7 @@
                 <div class="col-lg-7 col-md-6 col-sm-12">
                     <h2>Feedback Information</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> ChiKoi</a></li>
+                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> SierraShop</a></li>
                         <li class="breadcrumb-item"><a href="admin.php?controller=feedback">Feedback</a></li>
                         <li class="breadcrumb-item active">Feedback Detail</li>
                     </ul>
@@ -114,7 +114,7 @@
                                     <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
                                         <ul class="dropdown-menu dropdown-menu-right">
                                             <li><a href="javascript:void(0);">Q/lý bình luận</a></li>
-                                            <li><a href="javascript:void(0);">Q/lý phản hồi</a></li>
+                                            <li><a href="javascript:void(0);">Feedback Manager</a></li>
                                             <li><a href="admin.php?controller=order">Q/lý đơn hàng</a></li>
                                         </ul>
                                     </li>

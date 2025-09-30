@@ -2,7 +2,7 @@
 
 permission_user();
 
-$title = 'Đơn hàng đang xử lý';
+$title = 'Orders In Process';
 $orderNav = 'class="active open"';
 
 require('admin/views/order/order-inprocess.php');

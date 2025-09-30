@@ -178,9 +178,9 @@ function user_update()
                 //content
                 $htmlStr = "";
                 $htmlStr .= "Hello " . $user_edited['user_name'] . " (" . $user_edited['user_username']  . "),<br /><br />";
-                $htmlStr .= "Did you just change your email for your account? Please click the button below to verify your email change and gain access to the Chi Koi Shop admin page.<br /><br /><br />";
+                $htmlStr .= "Did you just change your email for your account? Please click the button below to verify your email change and gain access to the SierraShop Shop admin page.<br /><br /><br />";
                 $htmlStr .= "<a href='{$verificationLink}' target='_blank' style='padding:1em; font-weight:bold; background-color:blue; color:#fff;'>VERIFY EMAIL</a><br /><br /><br />";
-                $htmlStr .= "Thank you for joining the Chi Koi Shop website.<br><br>";
+                $htmlStr .= "Thank you for joining the SierraShop Shop website.<br><br>";
                 $htmlStr .= "Regards,<br />";
                 $htmlStr .= "<a href='https://ibrahimfofanah.com/' target='_blank'>By Ibrahim Fofanah</a><br />";
                 //Server settings
@@ -278,9 +278,9 @@ function user_add()
             //content
             $htmlStr = "";
             $htmlStr .= "Hello " . $email . "),<br /><br />";
-            $htmlStr .= "Please click the button below to verify your registration and gain access to the Chi Koi Shop admin page.<br /><br /><br />";
+            $htmlStr .= "Please click the button below to verify your registration and gain access to the SierraShop Shop admin page.<br /><br /><br />";
             $htmlStr .= "<a href='{$verificationLink}' target='_blank' style='padding:1em; font-weight:bold; background-color:blue; color:#fff;'>VERIFY EMAIL</a><br /><br /><br />";
-            $htmlStr .= "Thank you for joining as a new member of the Chi Koi Shop website.<br><br>";
+            $htmlStr .= "Thank you for joining as a new member of the SierraShop Shop website.<br><br>";
             $htmlStr .= "Regards,<br />";
             $htmlStr .= "<a href='https://ibrahimfofanah.com/' target='_blank'>By Ibrahim Fofanah</a><br />";
             //Server settings

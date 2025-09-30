@@ -5,7 +5,7 @@
                 <div class="col-lg-7 col-md-6 col-sm-12">
                     <h2>Add New Page</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> ChiKoi</a></li>
+                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>" aria-label="Go to home"><i class="zmdi zmdi-home" aria-hidden="true"></i> Sierra Shop</a></li>
                         <li class="breadcrumb-item"><a href="admin.php">Blog</a></li>
                         <li class="breadcrumb-item"><a href="admin.php?controller=page">Page</a></li>
                         <li class="breadcrumb-item active">Add New Page</li>

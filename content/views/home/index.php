@@ -31,9 +31,9 @@ require 'newproduct.php'; ?>
                     <div class="project-image">
                         <div id="fcSlideshow" class="fc-slideshow">
                             <ul class="fc-slides">
-                                <li><a href="javascript:void(0);"><img class="img-responsive" src="public/img/bang-hieu-chikoishop.jpg" /></a></li>
+                                <li><a href="javascript:void(0);"><img class="img-responsive" src="public/img/bang-hieu-sierrashop.jpg" /></a></li>
                                 <li><a href="category/1-banh-xeo"><img class="img-responsive" src="public/img/banhxeo.jpg" /></a></li>
-                                <li><a href="javascript:void(0);"><img class="img-responsive" src="public/img/bang-hieu-chikoishop-1.jpg" /></a></li>
+                                <li><a href="javascript:void(0);"><img class="img-responsive" src="public/img/bang-hieu-sierrashop-1.jpg" /></a></li>
                             </ul>
                         </div>
                         <strong class="our-work">SaloneCart</strong>

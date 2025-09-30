@@ -32,7 +32,7 @@ $footerMenu = getAll('menu_footers', $menuFooterOptions);
 global $userNav;
 $userLogin = getRecord('users', $userNav);
 
-$link_image = $image_product ?? PATH_URL.'public/img/bang-hieu-chikoishop.jpg';
+$link_image = $image_product ?? PATH_URL.'public/img/bang-hieu-sierrashop.jpg';
 
 if (isset($url_product)) {
     $url_site = PATH_URL . $url_product . '/';
@@ -79,9 +79,9 @@ if (isset($url_product)) {
 		<![endif]-->
 	<script src="public/vendor/modernizr/modernizr.js"></script>
 	<script src="public/js/jquery-3.2.1.min.js"></script>
-	<meta property="og:site_name" content="Chi Koi Shop" />
-	<meta property="og:title" content="<?= isset($title) ? $title : 'Chi Koi Shop'; ?>" />
-	<meta property="article:tag" content="<?= isset($title) ? $title : 'Chi Koi Shop'; ?>" />
+	<meta property="og:site_name" content="SierraShop" />
+	<meta property="og:title" content="<?= isset($title) ? $title : 'SierraShop'; ?>" />
+	<meta property="article:tag" content="<?= isset($title) ? $title : 'SierraShop'; ?>" />
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content="<?= $url_site; ?>" />
 	<link rel="canonical" href="<?= $url_site; ?>" />
@@ -95,7 +95,7 @@ if (isset($url_product)) {
 	<meta property="fb:app_id" content="517386205818335" />
 	<meta name="twitter:description" content="Selling food & drinks, cosmetics, beauty products,..." />
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content="<?= isset($title) ? $title : 'Chi Koi Shop'; ?>" />
+	<meta name="twitter:title" content="<?= isset($title) ? $title : 'SierraShop'; ?>" />
 	<meta name="twitter:image" content="<?= $link_image; ?>" />
 </head>
 
@@ -151,7 +151,7 @@ if (isset($url_product)) {
 									<li><a href="index.php?controller=product&action=all">View all products</a></li>
 									<li><a href="feedback">Send feedback <span class="tip">Send</span></a></li>
 									<li class="dropdown-submenu">
-										<a href="javascript:void(0);">About Chi Koi Shop</a>
+										<a href="javascript:void(0);">About SierraShop</a>
 										<ul class="dropdown-menu">
 											<li><a href="<?= $contactUrl ?>">Contact</a></li>
 											<li><a href="<?= $aboutUrl ?>">About the shop</a></li>

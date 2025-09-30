@@ -19,7 +19,7 @@ function updateHeaderFooter()
         'about_footer' => escape($_POST['about_footer']),
     ];
     $contact_id = save('contacts', $contacts);
-    $image_name1 = 'logo-chikoiquan-' . slug($_POST['name']);
+        $image_name1 = 'logo-sierrashop-' . slug($_POST['name']);
     $config = [
         'name' => $image_name1,
         'upload_path' => 'public/img/',
@@ -33,7 +33,7 @@ function updateHeaderFooter()
         ];
         save('contacts', $contacts);
     }
-    $image_name2 = 'favicon-chikoiquan-' . slug($_POST['name']);
+        $image_name2 = 'favicon-sierrashop-' . slug($_POST['name']);
     $config2 = [
         'name' => $image_name2,
         'upload_path' => 'public/img/',

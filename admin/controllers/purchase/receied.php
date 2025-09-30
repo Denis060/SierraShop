@@ -10,12 +10,12 @@ if (!empty($userNav)) {
         'order_by' => 'createtime DESC',
     ];
     $receiedOrders = getAll('orders', $options);
-    $title = 'Đơn hàng đã nhận';
+    $title = 'Received Orders';
     $yourPurchaseNav = 'class="active open"';
     $status = [
-        0 => 'Đã xác nhận đơn hàng',
-        2 => 'Đang giao hàng',
-        1 => 'Đã giao hàng',
+        0 => 'Order Confirmed',
+        2 => 'In Delivery',
+        1 => 'Delivered',
     ];
 }
 

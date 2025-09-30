@@ -5,7 +5,7 @@ require_once('admin/models/order.php');
 
 if (!empty($_POST)) {
     addFeedbackOrder();
-    echo "<div style='padding-top: 200px' class='container'><div style='text-align: center;' class='alert alert-success'><strong>Done!</strong> Thư phản hồi của bạn đã được gửi đến hệ thống của quán Chị Kòi. Cảm ơn bạn đã gửi lại phản hồi về quán. <br><br>Hãy đến <a href='admin.php'>Dashboard</a></div></div>";
+    echo "<div style='padding-top: 200px' class='container'><div style='text-align: center;' class='alert alert-success'><strong>Done!</strong> Your feedback has been sent to SierraShop system. Thank you for sending feedback about the shop. <br><br>Go to <a href='admin.php'>Dashboard</a></div></div>";
     require('content/views/feedback/result.php');
     exit;
 }
@@ -29,7 +29,7 @@ $status = [
     2 => 'Đang xử lý',
     3 => 'Đã bị hủy',
 ];
-$title = 'Gửi phản hồi của bạn đến Chị Kòi Quán';
+$title = 'Send Your Feedback to SierraShop';
 $navFeedback = 'class="active open"';
 
 require('admin/views/feedback/add.php');

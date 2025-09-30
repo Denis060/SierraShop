@@ -1,6 +1,6 @@
 <?php
 
-$title = 'Tất cả phản hồi của bạn';
+$title = 'All Your Feedback';
 $navFeedback = $yourFeedback = 'class="active open"';
 global $userNav;
 

@@ -59,7 +59,7 @@
                                     <tfoot>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Tên Slide</th>
+                                            <th>Slide Name</th>
                                             <th>Image 1</th>
                                             <th>Image 2</th>
                                             <th>Image 3</th>
@@ -105,7 +105,7 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Tên Slide</th>
+                                            <th>Slide Name</th>
                                             <th>Text 1</th>
                                             <th>Text 2</th>
                                             <th>Text 3</th>
@@ -117,7 +117,7 @@
                                     <tfoot>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Tên Slide</th>
+                                            <th>Slide Name</th>
                                             <th>Text 1</th>
                                             <th>Text 2</th>
                                             <th>Text 3</th>

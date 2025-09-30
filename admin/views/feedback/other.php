@@ -10,11 +10,11 @@
         <div class="block-header">
             <div class="row">
                 <div class="col-lg-7 col-md-6 col-sm-12">
-                    <h2>Phản hồi của khách hàng - Không xác định</h2>
+                    <h2>Customer Feedback - Unspecified</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> ChiKoi</a></li>
-                        <li class="breadcrumb-item"><a href="admin.php?controller=feedback">Phản hồi</a></li>
-                        <li class="breadcrumb-item active">Phản hồi Không xác định</li>
+                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> SierraShop</a></li>
+                        <li class="breadcrumb-item"><a href="admin.php?controller=feedback">Feedback</a></li>
+                        <li class="breadcrumb-item active">Unspecified Feedback</li>
                     </ul>
                     <button class="btn btn-primary btn-icon mobile_menu" type="button"><i class="zmdi zmdi-sort-amount-desc"></i></button>
                 </div>
