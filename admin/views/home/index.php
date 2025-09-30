@@ -380,7 +380,7 @@
                                                     <td><?= getTime($product_update['editDate'], gmdate('Y:m:d H:i:s', time() + 7 * 3600)) ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><i class="zmdi zmdi-account-add"></i> Người dùng mới</td>
+                                                    <td><i class="zmdi zmdi-account-add"></i> New Users</td>
                                                     <td><?= $user_new['user_name'] ?></td>
                                                 </tr>
                                                 <tr>

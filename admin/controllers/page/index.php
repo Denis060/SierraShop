@@ -4,7 +4,7 @@ permission_user();
 
 require_once('admin/models/posts.php');
 
-$title = 'All Page - Chị Kòi Quán';
+$title = 'All Pages - SierraShop';
 $pageNav = 'class="active open"';
 
 if (isset($_GET['page'])) {

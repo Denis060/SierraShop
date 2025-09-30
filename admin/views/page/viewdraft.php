@@ -70,7 +70,7 @@
                                             <td>
                                                 <a title="Move Trash" class="btn btn-danger btn-round" href="admin.php?controller=page&action=trash&post_id=<?= $page['id'] ?>"> <i class="zmdi zmdi-delete"></i> Move Trash</a>
                                                 <a title="Edit" class="btn btn-warning btn-icon btn-icon-mini btn-round" href="admin.php?controller=page&action=edit&post_id=<?= $page['id'] ?>"> <i class="zmdi zmdi-edit"></i> </a>
-                                                <a title="Public" class="btn btn-success btn-round" href="admin.php?controller=page&action=public&post_id=<?= $page['id'] ?>"> <i class="zmdi zmdi-sun"></i> Công khai</a>
+                                                <a title="Public" class="btn btn-success btn-round" href="admin.php?controller=page&action=public&post_id=<?= $page['id'] ?>"> <i class="zmdi zmdi-sun"></i> Publish</a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

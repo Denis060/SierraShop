@@ -143,7 +143,7 @@ function user_update()
     $email_check = addslashes($_POST['email']);
     $id_check = intval($_POST['user_id']);
     if (mysqli_num_rows(mysqli_query($linkConnectDB, "SELECT user_email FROM users WHERE user_email='$email_check'")) != 0 && mysqli_num_rows(mysqli_query($linkConnectDB, "SELECT user_email FROM users WHERE id='$id_check' AND user_email='$email_check'")) <> 1) {
-        echo "<div style='padding-top: 200px' class='container'><div class='alert alert-danger' style='text-align: center;'><strong>NO!</strong> Email này đã có người dùng. Vui lòng chọn Email khác. <a href='javascript: history.go(-1)'>Trở lại</a></div></div>";
+        echo "<div style='padding-top: 200px' class='container'><div class='alert alert-danger' style='text-align: center;'><strong>ERROR!</strong> This email is already in use. Please choose a different email. <a href='javascript: history.go(-1)'>Go Back</a></div></div>";
         require('admin/views/user/result.php');
         exit;
     } else {

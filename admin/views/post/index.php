@@ -71,7 +71,7 @@
                                                 <?php if ($post['post_status'] <> 'Draft') : ?>
                                                     <a title="View" class="btn btn-success btn-icon btn-icon-mini btn-round" target="_blank" href="post/<?= $post['id'] . '-' . $post['post_slug'] ?>"> <i class="zmdi zmdi-eye"></i> </a>
                                                 <?php else : ?>
-                                                    <a title="Public" class="btn btn-success btn-round" href="admin.php?controller=post&action=public&post_id=<?= $post['id'] ?>"> <i class="zmdi zmdi-sun"></i> Công khai</a>
+                                                    <a title="Public" class="btn btn-success btn-round" href="admin.php?controller=post&action=public&post_id=<?= $post['id'] ?>"> <i class="zmdi zmdi-sun"></i> Publish</a>
                                                 <?php endif; ?>
                                             </td>
                                         </tr>
