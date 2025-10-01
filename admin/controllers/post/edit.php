@@ -15,7 +15,7 @@ if (isset($_GET['post_id'])) {
     $postId = 0;
 }
 
-$title = 'Sửa bài viết - Chị Kòi Quán';
+$title = 'Edit Post - SierraShop';
 $postNav = 'class="active open"';
 $post = getRecord('posts', $postId);
 global $userNav;

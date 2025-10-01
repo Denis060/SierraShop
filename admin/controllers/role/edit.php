@@ -15,7 +15,7 @@ if (isset($_GET['role_id'])) {
     $roleId = 0;
 }
 
-$title = ($roleId == 0) ? 'Thêm quyền truy cập' : 'Sửa quyền truy cập';
+$title = ($roleId == 0) ? 'Add Role Permission' : 'Edit Role Permission';
 $adminNav = 'class="active open"';
 $role = getRecord('roles', $roleId);
 

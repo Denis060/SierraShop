@@ -51,7 +51,7 @@ $comments = getAll('comments', $option);
                                 } ?>
                                 <tr>
                                     <td>
-                                        <?= '<image src="public/upload/images/' . $comment['link_image'] . '?time=' . time() . '" style="max-width:20px;" />'; ?>
+                                        <?= '<img src="public/upload/images/' . $comment['link_image'] . '?time=' . time() . '" style="max-width:20px;" />'; ?>
                                         <strong><?= $comment['author'] ?></strong> | <strong><?= getTime($comment['createDate'], gmdate('Y:m:d H:i:s', time() + 7 * 3600)) ?></strong>
                                         <br><?php if ($comment['product_id'] <> 0) { ?>
                                             <a target="_blank" href="<?= PATH_URL . 'product/' . $product['id'] . '-' . $product['slug'] ?>"><?= PATH_URL . 'product/' . $product['id'] . '-' . $product['slug'] ?></a>

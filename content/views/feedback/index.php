@@ -10,7 +10,7 @@ require('content/views/shared/header.php'); ?>
         <hr class="tall">
         <div class="row">
             <div class="col-md-12">
-                <h2 class="shorter"><strong>Send your feedback to SaloneCart</strong></h2>
+                <h2 class="shorter"><strong>Send your feedback to SierraShop</strong></h2>
                 <?php if (isset($userNav)) {
                     echo '<p>You are logged in as: <a href="admin.php?controller=user&action=info&user_id=' . $userNav . '"><b>' . $userAction['user_name'] . '</b></a></p>';
                 } else {

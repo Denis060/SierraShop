@@ -85,7 +85,7 @@
                                                     <td><?= $stt; ?></td>
                                                     <td><a href="product/<?= $product['id']; ?>-<?= $product['slug'] ?>"><?= $product['product_name']; ?></a></td>
                                                     <td><?php if (is_file("public/upload/products/" . $product['img1'])) {
-                                                        echo '<image src="public/upload/products/' . $product['img1'] . '?time=' . time() . '" style="max-width:50px;" />';
+                                                        echo '<img src="public/upload/products/' . $product['img1'] . '?time=' . time() . '" style="max-width:50px;" />';
                                                     } ?></td>
                                                     <td><?= number_format($product['product_price'], 0, ',', '.') ?></td>
                                                     <td><?php if ($product['saleoff'] == 1) {
@@ -146,7 +146,7 @@
                                                     echo number_format(($product['product_price'] - (($product['product_price']) * ($product['percentoff']) / 100)), 0, ',', '.');
                                                 } ?></td>
                                                 <td><?= $product['createDate'] ?></td>
-                                                <td><?= '<image src="public/upload/products/' . $product['img1'] . '?time=' . time() . '" style="max-width:50px;" />'; ?></td>
+                                                <td><?= '<img src="public/upload/products/' . $product['img1'] . '?time=' . time() . '" style="max-width:50px;" />'; ?></td>
                                                 <td><?= $product['totalView'] ?></td>
                                             </tr>
                                         </tbody>

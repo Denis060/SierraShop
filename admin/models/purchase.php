@@ -14,6 +14,7 @@ function orderCancel($id)
 function purchase_order_detail($orderId)
 {
     global $linkConnectDB;
+    $orderId = intval($orderId);
     $sql = "SELECT products.id, products.product_name,products.img1, products.product_price,products.product_typeid, products.percentoff, products.saleoff, order_detail.quantity, order_detail.product_id, products.product_description, products.slug
 			FROM order_detail
 			INNER JOIN products ON products.id=order_detail.product_id

@@ -15,7 +15,7 @@ if (isset($_GET['product_id'])) {
     $productId = 0;
 }
 
-$title = ($productId == 0) ? 'Thêm sản phẩm' : 'Sửa sản phẩm: ';
+$title = ($productId == 0) ? 'Add Product' : 'Edit Product: ';
 $productNav = 'class="active open"';
 $product = getRecord('products', $productId);
 

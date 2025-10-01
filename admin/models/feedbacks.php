@@ -77,13 +77,13 @@ function feedbackReplyMail($html, $email)
         $mail->SMTPSecure = 'ssl'; // Enable TLS encryption, `ssl` also accepted
         $mail->Port = SMTP_PORT; // TCP port to connect to
         //Recipients
-        $mail->setFrom(SMTP_UNAME, "SaloneCart");
+        $mail->setFrom(SMTP_UNAME, "SierraShop");
         $mail->addAddress($email, $email);     // Add a recipient | recipient name is optional
         $mail->addReplyTo(SMTP_UNAME, 'SmartWave Media');
         //$mail->addCC('CCemail@gmail.com');
         //$mail->addBCC('BCCemail@gmail.com');
         $mail->isHTML(true); // Set email format to HTML
-        $mail->Subject = 'Reply to your feedback | SaloneCart | By Ibrahim Fofanah';
+        $mail->Subject = 'Reply to your feedback | SierraShop | By Ibrahim Fofanah';
         $mail->Body = $htmlStr;
         $mail->AltBody = $htmlStr; //Non-HTML
         $result = $mail->send();

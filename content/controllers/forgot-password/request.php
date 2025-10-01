@@ -8,7 +8,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 require_once 'lib/email_helper.php';
 
 if (!empty($_POST['email'])) {
-    $email = $_POST['email'];
+    $email = escape($_POST['email']);
     global $linkConnectDB;
     
     if (!preg_match("/([a-z0-9_]+|[a-z0-9_]+\.[a-z0-9_]+)@(([a-z0-9]|[a-z0-9]+\.[a-z0-9]+)+\.([a-z]{2,4}))/i", $email)) {

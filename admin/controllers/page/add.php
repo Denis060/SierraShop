@@ -16,6 +16,6 @@ if (isset($_GET['post_id'])) {
 
 $post = getRecord('posts', $postId);
 $pageNav = 'class="active open"';
-$title = 'Thêm trang mới - Chị Kòi Quán';
+$title = 'Add New Page - SierraShop';
 
 require('admin/views/page/add.php');

@@ -12,7 +12,7 @@
                 <div class="col-lg-7 col-md-6 col-sm-12">
                     <h2>Project list</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="admin.php"><i class="zmdi zmdi-home"></i> SaloneCart</a></li>
+                        <li class="breadcrumb-item"><a href="admin.php"><i class="zmdi zmdi-home"></i> SierraShop</a></li>
                         <li class="breadcrumb-item">Blog</li>
                         <li class="breadcrumb-item active">Pages</li>
                     </ul>

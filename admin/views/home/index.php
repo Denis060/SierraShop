@@ -201,9 +201,9 @@
                                     <ul class="header-dropdown">
                                         <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
                                             <ul class="dropdown-menu dropdown-menu-right">
-                                                <li><a href="admin.php?controller=comment">Q/lý bình luận</a></li>
-                                                <li><a href="admin.php?controller=feedback">Q/lý phản hồi</a></li>
-                                                <li><a href="admin.php?controller=order">Q/lý đơn hàng</a></li>
+                                                <li><a href="admin.php?controller=comment">Manage Comments</a></li>
+                                                <li><a href="admin.php?controller=feedback">Manage Feedback</a></li>
+                                                <li><a href="admin.php?controller=order">Manage Orders</a></li>
                                             </ul>
                                         </li>
                                         <li class="remove">
@@ -269,9 +269,9 @@
                                     <ul class="header-dropdown">
                                         <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
                                             <ul class="dropdown-menu dropdown-menu-right">
-                                                <li><a href="admin.php?controller=comment">Q/lý bình luận</a></li>
-                                                <li><a href="admin.php?controller=feedback">Q/lý phản hồi</a></li>
-                                                <li><a href="admin.php?controller=order">Q/lý đơn hàng</a></li>
+                                                <li><a href="admin.php?controller=comment">Manage Comments</a></li>
+                                                <li><a href="admin.php?controller=feedback">Manage Feedback</a></li>
+                                                <li><a href="admin.php?controller=order">Manage Orders</a></li>
                                             </ul>
                                         </li>
                                         <li class="remove">
@@ -338,11 +338,11 @@
                         <div class="col-lg-12 col-md-12 col-sm-12">
                             <div class="card">
                                 <div class="header">
-                                    <h2>Bảng <strong>Thống kê 2</strong></h2>
+                                    <h2>Statistics <strong>Table 2</strong></h2>
                                     <ul class="header-dropdown">
                                         <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
                                             <ul class="dropdown-menu dropdown-menu-right">
-                                                <li><a href="admin.php?controller=user&action=listall">Q/lý User</a></li>
+                                                <li><a href="admin.php?controller=user&action=listall">Manage Users</a></li>
                                                 <li><a href="admin.php?controller=comment">Manage Comments</a></li>
                                                 <li><a href="admin.php?controller=feedback">Manage Feedback</a></li>
                                                 <li><a href="admin.php?controller=order">Manage Orders</a></li>
@@ -368,7 +368,7 @@
                                                     <td><?= $total_new_product ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><i class="zmdi zmdi-case-download"></i> Sản phẩm khuyến mãi</td>
+                                                    <td><i class="zmdi zmdi-case-download"></i> Sale Products</td>
                                                     <td><?= $total_sale_product ?></td>
                                                 </tr>
                                                 <tr>
@@ -384,23 +384,23 @@
                                                     <td><?= $user_new['user_name'] ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><i class="zmdi zmdi-accounts"></i> Tổng Số lượng User</td>
+                                                    <td><i class="zmdi zmdi-accounts"></i> Total Users</td>
                                                     <td><?= $user_all_total ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><i class="zmdi zmdi-mood-bad"></i> Tổng User chưa Verified</td>
+                                                    <td><i class="zmdi zmdi-mood-bad"></i> Unverified Users</td>
                                                     <td><?= $user_not_veri_total ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><i class="zmdi zmdi-receipt"></i> Tổng số Bài viết</td>
+                                                    <td><i class="zmdi zmdi-receipt"></i> Total Posts</td>
                                                     <td><?= $total_post ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><i class="zmdi zmdi-reader"></i> Tổng số Trang</td>
+                                                    <td><i class="zmdi zmdi-reader"></i> Total Pages</td>
                                                     <td><?= $total_page ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><i class="zmdi zmdi-delete"></i> Trang & Bài viết rác</td>
+                                                    <td><i class="zmdi zmdi-delete"></i> Trash Posts & Pages</td>
                                                     <td><?= $total_post_trash ?></td>
                                                 </tr>
                                             </tbody>
@@ -414,14 +414,14 @@
                         <div class="col-lg-12 col-md-12 col-sm-12">
                             <div class="card">
                                 <div class="header">
-                                    <h2>Bảng <strong>Thống kê 3</strong></h2>
+                                    <h2>Statistics <strong>Table 3</strong></h2>
                                     <ul class="header-dropdown">
                                         <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
                                             <ul class="dropdown-menu dropdown-menu-right">
-                                                <li><a href="admin.php?controller=user&action=listall">Q/lý User</a></li>
-                                                <li><a href="admin.php?controller=comment">Q/lý bình luận</a></li>
-                                                <li><a href="admin.php?controller=feedback">Q/lý phản hồi</a></li>
-                                                <li><a href="admin.php?controller=order">Q/lý đơn hàng</a></li>
+                                                <li><a href="admin.php?controller=user&action=listall">Manage Users</a></li>
+                                                <li><a href="admin.php?controller=comment">Manage Comments</a></li>
+                                                <li><a href="admin.php?controller=feedback">Manage Feedback</a></li>
+                                                <li><a href="admin.php?controller=order">Manage Orders</a></li>
                                             </ul>
                                         </li>
                                         <li class="remove">

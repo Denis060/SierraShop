@@ -11,7 +11,7 @@ if (isset($_POST['product_id'])) {
     }
 }
 
-$title = 'Sản phẩm mới order';
+$title = 'Hot Products';
 $productNav = 'class="active open"';
 
 require('admin/views/product/hotproduct.php');

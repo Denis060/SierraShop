@@ -4,7 +4,7 @@ permission_user();
 
 require_once('admin/models/products.php');
 
-$title = 'Tổng Danh Sách Các Sản phẩm';
+$title = 'All Products List';
 $productNav = 'class="active open"';
 
 require('admin/views/product/index.php');

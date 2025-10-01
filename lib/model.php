@@ -75,8 +75,12 @@ function save($table, $data = array())
     $values = array();
     global $linkConnectDB;
     foreach ($data as $key => $value) {
-        $value = mysqli_real_escape_string($linkConnectDB, $value);
-        $values[] = "`$key`='$value'";
+        if ($value === null) {
+            $values[] = "`$key`=NULL";
+        } else {
+            $value = mysqli_real_escape_string($linkConnectDB, $value);
+            $values[] = "`$key`='$value'";
+        }
     }
     $id = intval($data['id']);
     if ($id > 0) {

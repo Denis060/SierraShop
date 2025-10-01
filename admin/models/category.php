@@ -13,6 +13,7 @@ function deleteSubCategory($id)
         postDestroy($product['id']);
     }
     global $linkConnectDB;
+    $id = intval($id);
     $sql = "DELETE FROM subcategory WHERE id=$id";
     mysqli_query($linkConnectDB, $sql) or die(mysqli_error($linkConnectDB));
 }

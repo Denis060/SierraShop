@@ -13,6 +13,7 @@ function categoryDestroy($id)
         postDestroy($product['id']);
     }
     global $linkConnectDB;
+    $id = intval($id);
     $sql = "DELETE FROM categories WHERE id=$id";
     mysqli_query($linkConnectDB, $sql) or die(mysqli_error($linkConnectDB));
 }

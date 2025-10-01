@@ -96,12 +96,13 @@
                             <form id="product-form" class="form-horizontal" method="post" action="admin.php?controller=product&amp;action=edit" enctype="multipart/form-data" role="form">
                                 <input name="product_id" type="hidden" value="<?= $product ? $product['id'] : '0'; ?>" />
                                 <?php global $userNav;
-                    $get_user_by = getRecord('users', $userNav) ?>
+                    $get_user_by = getRecord('users', $userNav);
+                    $user_name = ($get_user_by && isset($get_user_by['user_name'])) ? $get_user_by['user_name'] : ''; ?>
                                 <?php if (isset($product)) : ?>
-                                    <input name="editby" type="hidden" value="<?= $get_user_by['user_name']; ?>" />
-                                    <input name="createby" type="hidden" value="<?= $product['createBy']; ?>" />
+                                    <input name="editby" type="hidden" value="<?= $user_name; ?>" />
+                                    <input name="createby" type="hidden" value="<?= isset($product['createBy']) ? $product['createBy'] : ''; ?>" />
                                 <?php else : ?>
-                                    <input name="createby" type="hidden" value="<?= $get_user_by['user_name']; ?>" /><?php endif; ?>
+                                    <input name="createby" type="hidden" value="<?= $user_name; ?>" /><?php endif; ?>
                                 <h2 class="card-inside-title" style="font-weight:bold;">Product Name:</h2>
                                 <div class="row clearfix">
                                     <div class="col-sm-12">

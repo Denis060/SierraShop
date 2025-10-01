@@ -25,6 +25,7 @@ function postDestroy($id)
         unlink($image4);
     }
     global $linkConnectDB;
+    $id = intval($id);
     $sql = "DELETE FROM products WHERE id=$id";
     mysqli_query($linkConnectDB, $sql) or die(mysqli_error($linkConnectDB));
 }
@@ -36,19 +37,25 @@ function product_update()
         $editby = null;
     }
 
+    if (isset($_POST['createby'])) {
+        $createby = $_POST['createby'];
+    } else {
+        $createby = null;
+    }
+
     if ($_POST['product_id'] <> 0) {
         $editDate = gmdate('Y-m-d H:i:s', time() + 7 * 3600);
     } else {
-        $editDate = '0000-00-00 00:00:00';
+        $editDate = null;
     }
 
     if ($_POST['createdate'] == null || $_POST['createdate'] == 'dd/mm/yyyy') {
-        $createDate = date('Y-m-d H:i:s', time() + 7 * 3600);
+        $createDate = date('Y-m-d', time() + 7 * 3600);
     } else {
         $createDate = $_POST['createdate'];
     }
 
-    $name = escape($_POST['name']);
+    $name = isset($_POST['name']) && $_POST['name'] ? escape($_POST['name']) : '';
     if (strlen($_POST['slug']) >= 5) {
         $slug = slug($_POST['slug']);
     } else {
@@ -61,19 +68,19 @@ function product_update()
         'sub_category_id' => intval($_POST['subcategory_id']),
         'product_name' => $name,
         'slug' => $slug,
-        'product_size' => escape($_POST['size']),
+        'product_size' => isset($_POST['size']) && $_POST['size'] ? escape($_POST['size']) : '',
         'product_typeid' => intval($_POST['type_id']),
         'product_price' => intval($_POST['price']),
-        'product_color' => escape($_POST['color']),
-        'product_material' => escape($_POST['material']),
+        'product_color' => isset($_POST['color']) && $_POST['color'] ? escape($_POST['color']) : '',
+        'product_material' => isset($_POST['material']) && $_POST['material'] ? escape($_POST['material']) : '',
         'createDate' => $createDate,
         'saleoff' => intval($_POST['status']),
         'percentoff' => intval($_POST['percent_off']),
         'totalView' => intval($_POST['totalview']),
-        'product_description' => ($_POST['description']),
-        'product_detail' => ($_POST['detail']),
-        'createBy' => escape($_POST['createby']),
-        'editBy' => escape($editby),
+        'product_description' => isset($_POST['description']) ? $_POST['description'] : '',
+        'product_detail' => isset($_POST['detail']) ? $_POST['detail'] : '',
+        'createBy' => $createby ? escape($createby) : '',
+        'editBy' => $editby ? escape($editby) : '',
         'editDate' => $editDate,
     ];
     $productId = save('products', $product);

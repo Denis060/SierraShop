@@ -5,7 +5,7 @@
  * @var string $contactUrl
  */
 
-$title = 'Error 404 Not Found - SaloneCart';
+$title = 'Error 404 Not Found - SierraShop';
 require('content/views/shared/header.php');
 ?>
 <div role="main" class="main">

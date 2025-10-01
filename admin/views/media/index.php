@@ -70,7 +70,7 @@
                                         <?php foreach ($listMedia as $media) : ?>
                                             <tr>
                                                 <td><?= $media['id'] ?></td>
-                                                <td><?= '<image src="public/upload/media/' . $media['slug'] . '?time=' . time() . '" style="max-width:50px;" />'; ?></td>
+                                                <td><?= '<img src="public/upload/media/' . $media['slug'] . '?time=' . time() . '" style="max-width:50px;" />'; ?></td>
                                                 <td><a href="admin.php?controller=media&amp;action=edit&amp;media_id=<?= $media['id']; ?>"><?= $media['media_name']; ?></a></td>
                                                 <td><?= $media['slug'] ?></td>
                                                 <td><?= $media['createDate']; ?></td>

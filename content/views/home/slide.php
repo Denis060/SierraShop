@@ -37,7 +37,7 @@
 			<div class="row">
 				<div class="col-md-8">
 					   <p>
-						   SaloneCart Restaurant specializes in selling specialty Banh Xeo + wild vegetables, along with many types of milk tea, soft drinks, and other delicious snacks. <em>Food and soft drinks</em>
+						   SierraShop Restaurant specializes in selling specialty Banh Xeo + wild vegetables, along with many types of milk tea, soft drinks, and other delicious snacks. <em>Food and soft drinks</em>
 						   <span>In addition, we also sell cosmetics, beauty products, and much more.</span>
 					   </p>
 				</div>

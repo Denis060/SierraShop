@@ -73,20 +73,20 @@ try {
                                 <?php foreach ($total_product_update as $product) : ?>
                                     <tr>
                                         <td><?= htmlspecialchars($product['id']) ?></td>
-                                        <td><a href="admin.php?controller=product&amp;action=edit&amp;product_id=<?= $product['id']; ?>"><?= htmlspecialchars($product['product_name']); ?></a></td>
+                                        <td><a href="admin.php?controller=product&amp;action=edit&amp;product_id=<?= $product['id']; ?>"><?= htmlspecialchars($product['product_name'] ?? '') ?></a></td>
                                         <td><?= $product ? number_format($product['product_price'], 0, ',', '.') : 0; ?></td>
-                                        <td><?= htmlspecialchars($product['createDate']) ?></td>
-                                        <td><?= htmlspecialchars($product['editDate']) ?></td>
+                                        <td><?= htmlspecialchars($product['createDate'] ?? '') ?></td>
+                                        <td><?= htmlspecialchars($product['editDate'] ?? 'Never') ?></td>
                                         <td>
                                             <?php if (!empty($product['img1'])): ?>
-                                                <img src="public/upload/products/<?= htmlspecialchars($product['img1']) ?>?time=<?= time() ?>" style="max-width:50px;" alt="Product Image" />
+                                                <img src="public/upload/products/<?= htmlspecialchars($product['img1'] ?? '') ?>?time=<?= time() ?>" style="max-width:50px;" alt="Product Image" />
                                             <?php else: ?>
                                                 <span class="text-muted">No Image</span>
                                             <?php endif; ?>
                                         </td>
-                                        <td><?= htmlspecialchars($product['totalView']) ?></td>
+                                        <td><?= htmlspecialchars($product['totalView'] ?? '0') ?></td>
                                         <td>
-                                            <a href="product/<?= $product['id']; ?>-<?= htmlspecialchars($product['slug']) ?>" target="_blank" class="btn btn-success waves-effect waves-float btn-sm waves-green"><i class="zmdi zmdi-eye"></i></a>
+                                            <a href="product/<?= $product['id']; ?>-<?= htmlspecialchars($product['slug'] ?? '') ?>" target="_blank" class="btn btn-success waves-effect waves-float btn-sm waves-green"><i class="zmdi zmdi-eye"></i></a>
                                             <a href="admin.php?controller=product&amp;action=edit&amp;product_id=<?= $product['id']; ?>" class="btn btn-warning waves-effect waves-float btn-sm waves-green"><i class="zmdi zmdi-edit"></i></a>
                                             <a onclick="return confirm('Are you sure to delete?')" href="admin.php?controller=product&amp;action=delete&amp;product_id=<?= $product['id'] ?>" class="btn btn-danger waves-effect waves-float btn-sm waves-red"><i class="zmdi zmdi-delete"></i></a>
                                         </td>

@@ -16,9 +16,12 @@ function show404NotFound(): void
  *
  * @return string
  */
-function escape(string $str): string
+function escape(?string $str): string
 {
     global $linkConnectDB;
+    if ($str === null) {
+        return '';
+    }
     return mysqli_real_escape_string($linkConnectDB, $str);
 }
 

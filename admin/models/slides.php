@@ -25,6 +25,7 @@ function slide_delete($id)
         unlink($image5);
     }
     global $linkConnectDB;
+    $id = intval($id);
     $sql = "DELETE FROM slides WHERE id=$id";
     mysqli_query($linkConnectDB, $sql) or die(mysqli_error($linkConnectDB));
 }

@@ -9,7 +9,7 @@ if (!empty($_POST)) {
     updateHeaderFooter();
 }
 
-$title = 'Sửa header footer website';
+$title = 'Edit Website Header Footer';
 $navHF = 'class="active open"';
 $contact = getRecord('contacts', 1);
 

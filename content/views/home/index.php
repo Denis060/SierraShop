@@ -36,7 +36,7 @@ require 'newproduct.php'; ?>
                                 <li><a href="javascript:void(0);"><img class="img-responsive" src="public/img/bang-hieu-sierrashop-1.jpg" /></a></li>
                             </ul>
                         </div>
-                        <strong class="our-work">SaloneCart</strong>
+                        <strong class="our-work">SierraShop</strong>
                     </div>
                 </div>
             </div>

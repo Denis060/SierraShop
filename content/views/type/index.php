@@ -19,9 +19,9 @@ require('content/views/shared/header.php');
                 <div class="row">
                     <div class="col-md-6">
                         <h1 class="shorter"><strong><?= $type['type_name'] ?></strong></h1>
-                        <p>Hiển thị <?php if ($totalRows >= 9) {
-                            echo '1–9 trong ';
-                        } ?><?= $totalRows; ?> kết quả.</p>
+                        <p>Showing <?php if ($totalRows >= 9) {
+                            echo '1–9 of ';
+                        } ?><?= $totalRows; ?> results.</p>
                     </div>
                 </div>
 
@@ -38,7 +38,7 @@ require('content/views/shared/header.php');
                                 <span class="product-thumb-info">
                                     <form action="cart/add/<?= $product['id']; ?>" method="post">
                                         <input type="hidden" name="number_cart" value="1">
-                                        <a class="add-to-cart-product"><button type="submit" href="cart/add/<?= $product['id']; ?>"><i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng</button></a>
+                                        <a class="add-to-cart-product"><button type="submit" href="cart/add/<?= $product['id']; ?>"><i class="fa fa-shopping-cart"></i> Add to Cart</button></a>
                                     </form>
                                     <a href="product/<?= $product['id']; ?>-<?= $product['slug']; ?>">
                                         <span class="product-thumb-info-image">

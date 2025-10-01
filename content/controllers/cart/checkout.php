@@ -34,9 +34,9 @@ if (!empty($_POST)) {
     if (isset($userNav)) {
         detroy_cart_user_db();
     } //xóa đồng bộ cart trên db sau khi đặt hàng
-    $title = 'Order Successful - SaloneCart';
+    $title = 'Order Successful - SierraShop';
     header("refresh:15;url=" . PATH_URL . "home");
-    echo '<div style="text-align: center;padding: 20px 10px;">Order placed successfully</div><div style="text-align: center;padding: 20px 10px;">Thank you for your order at SaloneCart. We will call you from the phone number you provided to confirm your order as soon as possible.<br>
+    echo '<div style="text-align: center;padding: 20px 10px;">Order placed successfully</div><div style="text-align: center;padding: 20px 10px;">Thank you for your order at SierraShop. We will call you from the phone number you provided to confirm your order as soon as possible.<br>
                     The browser will automatically redirect to the homepage after 15 seconds, or you can click <a href="' . PATH_URL . 'home">here</a>.</div>';
 } else {
     header('location:.');

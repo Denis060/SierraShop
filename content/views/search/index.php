@@ -15,9 +15,9 @@ require('content/views/shared/header.php');
                 <div class="row">
                     <div class="col-md-6">
                         <h1 class="shorter"><strong>Search</strong></h1>
-                        <p>Hiển thị <?php if ($totalRows >= 9) {
-                            echo '1–9 trong ';
-                        } ?><?= $totalRows; ?> kết quả.</p>
+                        <p>Showing <?php if ($totalRows >= 9) {
+                            echo '1–9 of ';
+                        } ?><?= $totalRows; ?> results.</p>
                     </div>
                 </div>
                 <div class="row">
@@ -33,9 +33,8 @@ require('content/views/shared/header.php');
                     </div>
                     <hr>
                     <div><?php if (empty($products)) { ?>
-                            <h3 class="col-sm-12">Không tìm thấy kết quả phù hợp cho từ khoá trên.</h3>
-                        <?php } else { ?><h3 class="col-sm-12">Có tổng cộng <?= $totalRows ?> kết quả phù hợp với từ
-                                khóa "<?= $keyword ?>".</h3><?php } ?></div>
+                            <h3 class="col-sm-12">No results found for the search term above.</h3>
+                        <?php } else { ?><h3 class="col-sm-12">Found a total of <?= $totalRows ?> results matching the keyword "<?= $keyword ?>".</h3><?php } ?></div>
                     <hr class="tall">
                     <ul class="products product-thumb-info-list" data-plugin-masonry data-plugin-options='{"layoutMode": "fitRows"}'>
                         <?php
@@ -49,7 +48,7 @@ require('content/views/shared/header.php');
                                 <span class="product-thumb-info">
                                     <form action="cart/add/<?= $product['id']; ?>" method="post">
                                         <input type="hidden" name="number_cart" value="1">
-                                        <a class="add-to-cart-product"><button type="submit" href="cart/add/<?= $product['id']; ?>"><i class="fa fa-shopping-cart"></i> Thêm vào giỏ hàng</button></a>
+                                        <a class="add-to-cart-product"><button type="submit" href="cart/add/<?= $product['id']; ?>"><i class="fa fa-shopping-cart"></i> Add to Cart</button></a>
                                     </form>
                                     <a href="product/<?= $product['id']; ?>-<?= $product['slug']; ?>">
                                         <span class="product-thumb-info-image">

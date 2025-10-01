@@ -38,7 +38,8 @@ function updateCartSession()
         $product_of_user = getAll('cart_user', $option);
         if (!empty($product_of_user)) {
             foreach ($product_of_user as $product) {
-                if (isset($_SESSION['cart'][$product['product_id']]) && mysqli_num_rows(mysqli_query($linkConnectDB, "SELECT product_id FROM cart_user WHERE product_id=" . $product['product_id']  . "")) == 1) {
+                $product_id = intval($product['product_id']);
+                if (isset($_SESSION['cart'][$product['product_id']]) && mysqli_num_rows(mysqli_query($linkConnectDB, "SELECT product_id FROM cart_user WHERE product_id=" . $product_id  . "")) == 1) {
                     //nếu đã có sp trong giỏ hàng thì số lượng công thêm $number
                     $_SESSION['cart'][$product['product_id']]['number'] += $product['number'];
                 } else {
@@ -68,6 +69,7 @@ function mergeCartSessionWithDB()
     $cart = cart_list();
 
     //nếu row > 0, tức người dùng đã có sp trên db
+    $userNav = intval($userNav);
     if (mysqli_num_rows(mysqli_query($linkConnectDB, "SELECT * FROM cart_user WHERE user_id=" . $userNav . "")) > 0) {
         foreach ($cart as $product_cart) {
             $option_cart_user = [
@@ -138,6 +140,8 @@ function detroy_cart_user_db()
 function delete_cart_user_db($productId)
 {
     global $userNav, $linkConnectDB;
+    $userNav = intval($userNav);
+    $productId = intval($productId);
     $sql = "DELETE FROM cart_user WHERE user_id=" . $userNav . " and product_id=" . $productId;
     mysqli_query($linkConnectDB, $sql) or die(mysqli_error($linkConnectDB));
 }

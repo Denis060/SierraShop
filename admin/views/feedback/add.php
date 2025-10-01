@@ -12,7 +12,7 @@
                 <div class="col-lg-7 col-md-6 col-sm-12">
                     <h2>Order Information</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> SaloneCart</a></li>
+                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> SierraShop</a></li>
                         <li class="breadcrumb-item"><a href="admin.php?controller=order">Orders</a></li>
                         <li class="breadcrumb-item active">Order Details</li>
                     </ul>
@@ -84,7 +84,7 @@ foreach ($orderDetail as $product) :
                                                 <td><?= $stt; ?></td>
                                                 <td><a href="product/<?= $product['id']; ?>-<?= $product['slug'] ?>"><?= $product['product_name']; ?></a></td>
                                                 <td><?php if (is_file("public/upload/products/" . $product['img1'])) {
-                                                    echo '<image src="public/upload/products/' . $product['img1'] . '?time=' . time() . '" style="max-width:50px;" />';
+                                                    echo '<img src="public/upload/products/' . $product['img1'] . '?time=' . time() . '" style="max-width:50px;" />';
                                                 } ?></td>
                                                 <td><?= number_format($product['product_price'], 0, ',', '.') ?></td>
                                                 <td><?php if ($product['saleoff'] == 1) {

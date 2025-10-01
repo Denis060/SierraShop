@@ -8,7 +8,7 @@
                         <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> SierraShop</a></li>
                         <li class="breadcrumb-item"><a href="admin.php">Blog</a></li>
                         <li class="breadcrumb-item"><a href="admin.php?controller=post">Post</a></li>
-                        <li class="breadcrumb-item active">Thêm bài viết mới</li>
+                        <li class="breadcrumb-item active">Add New Post</li>
                     </ul>
                 </div>
                 <div class="col-lg-5 col-md-6 col-sm-12">
@@ -21,7 +21,7 @@
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="alert alert-warning" role="alert">
-                        <strong><?= 'Cảnh Báo: </strong> Bạn đang trong trang thêm bài viết mới, Hãy cẩn trọng!!! <a target="_blank" href="#"> Xem tài liệu hướng dẫn</a>'; ?>
+                        <strong><?= 'Warning: </strong> You are on the add new post page. Please be careful!!! <a target="_blank" href="#"> View documentation</a>'; ?>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true"><i class="zmdi zmdi-close"></i></span>
                             </button>
@@ -37,23 +37,23 @@
                                         <?php if (isset($post)) : ?>
                                             <input name="editby" type="hidden" value="<?= $get_user_by['user_name']; ?>" /><?php else : ?>
                                             <input name="createby" type="hidden" value="<?= $get_user_by['id']; ?>" /><?php endif; ?>
-                                        <h2 class="card-inside-title" style="font-weight:bold;">Tiêu đề bài viết:</h2>
+                                        <h2 class="card-inside-title" style="font-weight:bold;">Post Title:</h2>
                                         <div class="row clearfix">
                                             <div class="col-sm-12">
                                                 <div class="form-group">
-                                                    <input name="title" type="text" value="<?= $post ? $post['post_title'] : ''; ?>" class="form-control" id="name" placeholder="Nhập tiêu đề bài viết..." required="" />
+                                                    <input name="title" type="text" value="<?= $post ? $post['post_title'] : ''; ?>" class="form-control" id="name" placeholder="Enter post title..." required="" />
                                                 </div>
                                             </div>
                                         </div>
-                                        <h2 class="card-inside-title" style="font-weight:bold;">Slug (Đường dẫn link bài viết):</h2>
+                                        <h2 class="card-inside-title" style="font-weight:bold;">Slug (Post URL Path):</h2>
                                         <div class="row clearfix">
                                             <div class="col-sm-12">
                                                 <div class="form-group">
-                                                    <input name="slug" type="text" value="<?= $post ? $post['post_slug'] : ''; ?>" class="form-control" id="slug" placeholder="Nhập đường dẫn link bài viết..." required="" />
+                                                    <input name="slug" type="text" value="<?= $post ? $post['post_slug'] : ''; ?>" class="form-control" id="slug" placeholder="Enter post URL path..." required="" />
                                                 </div>
                                             </div>
                                         </div>
-                                        <h2 class="card-inside-title" style="font-weight:bold;">Nội dung:</h2>
+                                        <h2 class="card-inside-title" style="font-weight:bold;">Content:</h2>
                                         <div class="row clearfix">
                                             <div class="col-sm-12">
                                                 <div class="form-group">
@@ -74,20 +74,20 @@
                                             </div>
                                         <?php endif; ?>
                                         <hr>
-                                        <h2 style="text-align: center;">Thêm ảnh mới</h2>
+                                        <h2 style="text-align: center;">Add New Image</h2>
                                         <div class="card col-md-12">
                                             <div class="header" style="text-align: center;">
-                                                <h2 style="text-align: center;">Ảnh Đại Diện</h2>
+                                                <h2 style="text-align: center;">Featured Image</h2>
                                             </div>
                                             <div class="body">
                                                 <input name="post_avatar" type="file" class="form-control dropify" accept="image/*">
                                             </div>
                                         </div>
-                                        <h2 class="card-inside-title" style="font-weight:bold;">Lượt xem bài viết:</h2>
+                                        <h2 class="card-inside-title" style="font-weight:bold;">Post Views:</h2>
                                         <div class="row clearfix">
                                             <div class="col-sm-12">
                                                 <div class="form-group">
-                                                    <input name="totalview" type="text" value="<?= $post ? $post['totalView'] : 0; ?>" class="form-control" id="totalview" placeholder="Lượt view..." />
+                                                    <input name="totalview" type="text" value="<?= $post ? $post['totalView'] : 0; ?>" class="form-control" id="totalview" placeholder="View count..." />
                                                 </div>
                                             </div>
                                         </div>

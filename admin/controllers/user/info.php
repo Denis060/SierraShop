@@ -1,5 +1,7 @@
 <?php
 
+permission_user();
+
 require_once('admin/models/users.php');
 $title = 'Personal Information';
 $nav_profile = $nav_user = 'class="active open"';

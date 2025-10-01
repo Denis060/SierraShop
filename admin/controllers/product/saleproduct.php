@@ -10,7 +10,7 @@ if (isset($_POST['product_id'])) {
         postDestroy($productId);
     }
 }
-$title = 'Sản phẩm khuyến mại';
+$title = 'Sale Products';
 $productNav = 'class="active open"';
 
 require('admin/views/product/saleproduct.php');

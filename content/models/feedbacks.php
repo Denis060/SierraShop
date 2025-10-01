@@ -26,7 +26,7 @@ function feedback_add()
         exit;
     }
     save('feedbacks', $feedback_add);
-    echo "<div style='padding-top: 200px' class='container'><div style='text-align: center;' class='alert alert-success'><strong>Done!</strong> Your feedback has been sent to the SaloneCart system. Thank you for your feedback. <br><br>Please go to <a href='index.php'>Homepage</a></div></div>";
+    echo "<div style='padding-top: 200px' class='container'><div style='text-align: center;' class='alert alert-success'><strong>Done!</strong> Your feedback has been sent to the SierraShop system. Thank you for your feedback. <br><br>Please go to <a href='index.php'>Homepage</a></div></div>";
     require('content/views/feedback/result.php');
     exit;
 }

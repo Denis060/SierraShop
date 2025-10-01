@@ -1,5 +1,8 @@
 <?php
 
+permission_user();
+permission_moderator();
+
 require_once('admin/models/users.php');
 if (isset($_POST['id_change'])) {
     global $userNav;

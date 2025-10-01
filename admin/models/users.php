@@ -25,9 +25,11 @@ function userLogin($input, $password)
     //     $sql = "SELECT * FROM users WHERE user_username = '$input' AND user_password='$password' LIMIT 0,1";
     // }
 
-    //cách 3
-    $sql = "SELECT * FROM `users` WHERE (LOWER(`user_username`)='" . strtolower($input) . "' OR
-    LOWER(`user_email`)='" . strtolower($input) . "') AND `user_password`='" . $password . "'";
+    //cách 3 - Secured with escape function
+    $input_escaped = escape(strtolower($input));
+    $password_escaped = escape($password);
+    $sql = "SELECT * FROM `users` WHERE (LOWER(`user_username`)='" . $input_escaped . "' OR
+    LOWER(`user_email`)='" . $input_escaped . "') AND `user_password`='" . $password_escaped . "'";
 
     $query = mysqli_query($linkConnectDB, $sql) or die(mysqli_error($linkConnectDB));
     if (mysqli_num_rows($query) > 0) {
@@ -55,7 +57,10 @@ function userDestroy($id)
 function changePassword($id, $newpassword, $currentPassword)
 {
     global $linkConnectDB;
-    $sql = "Update users SET user_password='$newpassword' WHERE id='$id' AND user_password = '$currentPassword'";
+    $id_escaped = escape($id);
+    $newpassword_escaped = escape($newpassword);
+    $currentPassword_escaped = escape($currentPassword);
+    $sql = "Update users SET user_password='$newpassword_escaped' WHERE id='$id_escaped' AND user_password = '$currentPassword_escaped'";
     mysqli_query($linkConnectDB, $sql) or die(mysqli_error($linkConnectDB));
     $rows = mysqli_affected_rows($linkConnectDB); //Gets the number of affected rows in a previous MySQL operation
     if ($rows <> 1) {
@@ -93,13 +98,13 @@ function changePassword($id, $newpassword, $currentPassword)
             $mail->SMTPSecure = 'ssl'; // Enable TLS encryption, `ssl` also accepted
             $mail->Port = SMTP_PORT; // TCP port to connect to
             //Recipients
-            $mail->setFrom(SMTP_UNAME, "SaloneCart");
+            $mail->setFrom(SMTP_UNAME, "SierraShop");
             $mail->addAddress($email, $email);     // Add a recipient | name is option tên người nhận
             $mail->addReplyTo(SMTP_UNAME, 'SmartWave Media');
             //$mail->addCC('CCemail@gmail.com');
             //$mail->addBCC('BCCemail@gmail.com');
             $mail->isHTML(true); // Set email format to HTML
-            $mail->Subject = 'You have Change your Password | SaloneCart | By SmartWave Media';
+            $mail->Subject = 'You have Change your Password | SierraShop | By SmartWave Media';
             $mail->Body = $htmlStr;
             $mail->AltBody = $htmlStr; //None HTML
             $result = $mail->send();
@@ -140,7 +145,7 @@ function user_update()
         'role_id' => $roleid,
     ];
     global $linkConnectDB;
-    $email_check = addslashes($_POST['email']);
+    $email_check = escape($_POST['email']);
     $id_check = intval($_POST['user_id']);
     if (mysqli_num_rows(mysqli_query($linkConnectDB, "SELECT user_email FROM users WHERE user_email='$email_check'")) != 0 && mysqli_num_rows(mysqli_query($linkConnectDB, "SELECT user_email FROM users WHERE id='$id_check' AND user_email='$email_check'")) <> 1) {
         echo "<div style='padding-top: 200px' class='container'><div class='alert alert-danger' style='text-align: center;'><strong>ERROR!</strong> This email is already in use. Please choose a different email. <a href='javascript: history.go(-1)'>Go Back</a></div></div>";
@@ -194,13 +199,13 @@ function user_update()
                 $mail->SMTPSecure = 'ssl'; // Enable TLS encryption, `ssl` also accepted
                 $mail->Port = SMTP_PORT; // TCP port to connect to
                 //Recipients
-                $mail->setFrom(SMTP_UNAME, "SaloneCart");
+                $mail->setFrom(SMTP_UNAME, "SierraShop");
                 $mail->addAddress($email, $email);     // Add a recipient | name is option tên người nhận
                 $mail->addReplyTo(SMTP_UNAME, 'Reply Name');
                 //$mail->addCC('CCemail@gmail.com');
                 //$mail->addBCC('BCCemail@gmail.com');
                 $mail->isHTML(true); // Set email format to HTML
-                $mail->Subject = 'Verification New Email | SaloneCart | Change Email | By Ibrahim Fofanah';
+                $mail->Subject = 'Verification New Email | SierraShop | Change Email | By Ibrahim Fofanah';
                 $mail->Body = $htmlStr;
                 $mail->AltBody = $htmlStr; //None HTML
                 $result = $mail->send();
@@ -234,8 +239,8 @@ function user_add()
         'user_phone' => escape($_POST['phone']),
     ];
     global $linkConnectDB;
-    $username = addslashes($_POST['username']);
-    $email = addslashes($_POST['email']);
+    $username = escape($_POST['username']);
+    $email = escape($_POST['email']);
     //https://freetuts.net/xay-dung-chuc-nang-dang-nhap-va-dang-ky-voi-php-va-mysql-85.html
     if (mysqli_num_rows(mysqli_query($linkConnectDB, "SELECT user_username FROM users WHERE user_username='$username'")) > 0) {
         echo "<div style='padding-top: 200px' class='container'><div class='alert alert-danger' style='text-align: center;'><strong>NO!</strong> This username is already taken. Please choose another username. <a href='javascript: history.go(-1)'>Go back</a></div></div>";
@@ -294,13 +299,13 @@ function user_add()
             $mail->SMTPSecure = 'ssl'; // Enable TLS encryption, `ssl` also accepted
             $mail->Port = SMTP_PORT; // TCP port to connect to
             //Recipients
-            $mail->setFrom(SMTP_UNAME, "SaloneCart");
+            $mail->setFrom(SMTP_UNAME, "SierraShop");
             $mail->addAddress($email, $email);     // Add a recipient | name is option tên người nhận
             $mail->addReplyTo(SMTP_UNAME, 'Reply Name');
             //$mail->addCC('CCemail@gmail.com');
             //$mail->addBCC('BCCemail@gmail.com');
             $mail->isHTML(true); // Set email format to HTML
-            $mail->Subject = 'Verification Users | SaloneCart | Subscription | By Ibrahim Fofanah';
+            $mail->Subject = 'Verification Users | SierraShop | Subscription | By Ibrahim Fofanah';
             $mail->Body = $htmlStr;
             $mail->AltBody = $htmlStr; //None HTML
             $result = $mail->send();

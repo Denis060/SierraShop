@@ -14,8 +14,8 @@ if (!empty($_POST)) {
         'createDate' => gmdate('Y-m-d H:i:s', time() + 7 * 3600),
     ];
     global $linkConnectDB;
-    $username = addslashes($_POST['username']);
-    $email = addslashes($_POST['email']);
+    $username = escape($_POST['username']);
+    $email = escape($_POST['email']);
     $get_user_email_option = [
         'order_by' => 'id',
     ];

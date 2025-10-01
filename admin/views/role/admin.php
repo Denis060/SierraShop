@@ -12,7 +12,7 @@
                 <div class="col-lg-7 col-md-6 col-sm-12">
                     <h2>Admin</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> SaloneCart</a></li>
+                        <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> SierraShop</a></li>
                         <li class="breadcrumb-item"><a href="admin.php?controller=user&action=listall">User</a></li>
                         <li class="breadcrumb-item active">Admin List</li>
                     </ul>
@@ -78,7 +78,7 @@
                                                     <td><?= $user['id'] ?></td>
                                                     <td><a href="admin.php?controller=user&amp;action=edit&amp;user_id=<?= $user['id']; ?>"><?= $user['user_name']; ?></a></td>
                                                     <td><?= $user['user_username'] ?></td>
-                                                    <td><?= '<image src="public/upload/images/' . $user['user_avatar'] . '?time=' . time() . '" style="max-width:50px;" />'; ?></td>
+                                                    <td><?= '<img src="public/upload/images/' . $user['user_avatar'] . '?time=' . time() . '" style="max-width:50px;" />'; ?></td>
                                                     <td><?php if ($user['role_id'] == 1) {
                                                         echo 'Admin';
                                                     } elseif ($user['role_id'] == 2) {

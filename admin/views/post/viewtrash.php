@@ -12,7 +12,7 @@
                 <div class="col-lg-7 col-md-6 col-sm-12">
                     <h2>Project list</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="admin.php"><i class="zmdi zmdi-home"></i> SaloneCart</a></li>
+                        <li class="breadcrumb-item"><a href="admin.php"><i class="zmdi zmdi-home"></i> SierraShop</a></li>
                         <li class="breadcrumb-item">Blog</li>
                         <li class="breadcrumb-item active"><a href="admin.php?controller=post">Posts</a></li>
                         <li class="breadcrumb-item active">Trash</li>
@@ -44,7 +44,7 @@
                                 </thead>
                                 <tbody>
                                     <?php if (empty($posts)) {
-                                        echo '<h3><strong>Hiện không có trang nào trong hệ thống.</strong></h3>';
+                                        echo '<h3><strong>No pages found in the system.</strong></h3>';
                                     }
                                     foreach ($posts as $post) : ?>
                                         <tr>

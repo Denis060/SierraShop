@@ -1,5 +1,8 @@
 <?php
 
+permission_user();
+permission_moderator();
+
 require_once('admin/models/users.php');
 if (isset($_GET['user_id'])) {
     $userId = intval($_GET['user_id']);

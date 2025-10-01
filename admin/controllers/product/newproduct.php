@@ -10,7 +10,7 @@ if (isset($_POST['product_id'])) {
         postDestroy($productId);
     }
 }
-$title = 'Sản phẩm mới - Quản trị Quán Chị Kòi';
+$title = 'New Products - SierraShop Admin';
 $productNav = 'class="active open"';
 
 require('admin/views/product/newproduct.php');

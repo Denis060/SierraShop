@@ -253,10 +253,9 @@
                                                 <div class="form-group">
                                                     <div class="col-md-12">
                                                         <?php if (isset($userNav)) : ?>
-                                                            <label>Bạn đang đăng nhập với tài khoản
-                                                                <strong><?= $userLogin['user_name'] ?></strong>. Bạn muốn
-                                                                <a href="admin.php?controller=home&action=logout">đăng
-                                                                    xuất</a>
+                                                            <label>You are logged in as
+                                                                <strong><?= $userLogin['user_name'] ?></strong>. Do you want to
+                                                                <a href="admin.php?controller=home&action=logout">log out</a>
                                                                 ?</label>
                                                         <?php else : ?>
                                                             <label>Bạn có muốn <strong><a
@@ -267,7 +266,7 @@
                                                         <textarea maxlength="5000"
                                                             data-msg-required="Please enter your message." rows="10"
                                                             class="form-control" name="content" id="message"
-                                                            placeholder="Nhập nhận xét hoặc tin nhắn hoặc bình luận của bạn về sản phẩm ....."></textarea>
+                                                            placeholder="Enter your review, message or comment about this product....."></textarea>
                                                     </div>
                                                 </div>
                                             </div>
