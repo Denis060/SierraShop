@@ -1,9 +1,26 @@
 <?php
-$options = [
-    'where' => 'product_typeid = 2',
-    'order_by' => 'createDate',
-];
-$products = getAll('products', $options); ?>
+// Add error handling and limit for performance
+error_log("Starting new products query...");
+$start_time = microtime(true);
+
+try {
+    $options = [
+        'where' => 'product_typeid = 2',
+        'order_by' => 'createDate DESC',
+        'limit' => '20'  // Limit to 20 products for faster loading
+    ];
+    $products = getAll('products', $options);
+    
+    $end_time = microtime(true);
+    $execution_time = $end_time - $start_time;
+    error_log("New products query completed in: " . $execution_time . " seconds");
+    error_log("Number of new products retrieved: " . count($products));
+    
+} catch (Exception $e) {
+    error_log("Error in new products query: " . $e->getMessage());
+    $products = [];
+}
+?>
 <!-- Basic Examples -->
 <div class="row clearfix">
     <div class="col-lg-12">
@@ -23,7 +40,7 @@ $products = getAll('products', $options); ?>
             </div>
             <div class="body">
                 <div class="table-responsive">
-                    <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                    <table class="table table-bordered table-striped table-hover">
                         <thead>
                             <tr>
                                 <th>ID</th>
@@ -49,22 +66,38 @@ $products = getAll('products', $options); ?>
                             </tr>
                         </tfoot>
                         <tbody>
-                            <?php foreach ($products as $product) : ?>
+                            <?php if (!empty($products)): ?>
+                                <?php foreach ($products as $product) : ?>
+                                    <tr>
+                                        <td><?= htmlspecialchars($product['id']) ?></td>
+                                        <td><a href="admin.php?controller=product&amp;action=edit&amp;product_id=<?= $product['id']; ?>"><?= htmlspecialchars($product['product_name']); ?></a></td>
+                                        <td><?= $product ? number_format($product['product_price'], 0, ',', '.') : 0; ?></td>
+                                        <td><?php if ($product["saleoff"] == 1) {
+                                            echo number_format(($product['product_price'] - (($product['product_price']) * ($product['percentoff']) / 100)), 0, ',', '.');
+                                        } else {
+                                            echo "No discount";
+                                        } ?></td>
+                                        <td><?= htmlspecialchars($product['createDate']) ?></td>
+                                        <td>
+                                            <?php if (!empty($product['img1'])): ?>
+                                                <img src="public/upload/products/<?= htmlspecialchars($product['img1']) ?>?time=<?= time() ?>" style="max-width:50px;" alt="Product Image" />
+                                            <?php else: ?>
+                                                <span class="text-muted">No Image</span>
+                                            <?php endif; ?>
+                                        </td>
+                                        <td><?= htmlspecialchars($product['totalView']) ?></td>
+                                        <td>
+                                            <a href="product/<?= $product['id']; ?>-<?= htmlspecialchars($product['slug']) ?>" target="_blank" class="btn btn-success waves-effect waves-float btn-sm waves-green"><i class="zmdi zmdi-eye"></i></a>
+                                            <a href="admin.php?controller=product&amp;action=edit&amp;product_id=<?= $product['id']; ?>" class="btn btn-warning waves-effect waves-float btn-sm waves-green"><i class="zmdi zmdi-edit"></i></a>
+                                            <a onclick="return confirm('Are you sure to delete?')" href="admin.php?controller=product&amp;action=delete&amp;product_id=<?= $product['id'] ?>" class="btn btn-danger waves-effect waves-float btn-sm waves-red"><i class="zmdi zmdi-delete"></i></a>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            <?php else: ?>
                                 <tr>
-                                    <td><?= $product['id'] ?></td>
-                                    <td><a href="admin.php?controller=product&amp;action=edit&amp;product_id=<?= $product['id']; ?>"><?= $product['product_name']; ?></a></td>
-                                    <td><?= $product ? number_format($product['product_price'], 0, ',', '.') : 0; ?></td>
-                                    <td><?php if ($product["saleoff"] == 1) {
-                                        echo number_format(($product['product_price'] - (($product['product_price']) * ($product['percentoff']) / 100)), 0, ',', '.');
-                                    } ?></td>
-                                    <td><?= $product['createDate'] ?></td>
-                                    <td><?= '<image src="public/upload/products/' . $product['img1'] . '?time=' . time() . '" style="max-width:50px;" />'; ?></td>
-                                    <td><?= $product['totalView'] ?></td>
-                                    <td><a href="product/<?= $product['id']; ?>-<?= $product['slug'] ?>" target="_blank" class="btn btn-success waves-effect waves-float btn-sm waves-green"><i class="zmdi zmdi-eye"></i></a>
-                                        <a href="admin.php?controller=product&amp;action=edit&amp;product_id=<?= $product['id']; ?>" class="btn btn-warning waves-effect waves-float btn-sm waves-green"><i class="zmdi zmdi-edit"></i></a>
-                                        <a onclick="return confirm('Are you sure to delete?')" href="admin.php?controller=product&amp;action=delete&amp;product_id=<?= $product['id'] ?>" class="btn btn-danger waves-effect waves-float btn-sm waves-red"><i class="zmdi zmdi-delete"></i></a></td>
+                                    <td colspan="8" class="text-center">No new products found</td>
                                 </tr>
-                            <?php endforeach; ?>
+                            <?php endif; ?>
                         </tbody>
                     </table>
                 </div>

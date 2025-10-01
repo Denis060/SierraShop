@@ -14,7 +14,7 @@
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> SierraShop</a></li>
                         <li class="breadcrumb-item"><a href="admin.php?controller=media">Media</a></li>
-                        <li class="breadcrumb-item active">Danh sách Ảnh - Media</li>
+                        <li class="breadcrumb-item active">Image List - Media</li>
                     </ul>
                     <button class="btn btn-primary btn-icon mobile_menu" type="button"><i class="zmdi zmdi-sort-amount-desc"></i></button>
                 </div>
@@ -29,11 +29,11 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="header">
-                            <h2><strong>Truy Xuất Dữ Liệu</strong> "All Media" </h2>
+                            <h2><strong>Data Retrieval</strong> "All Media" </h2>
                             <ul class="header-dropdown">
                                 <li class="dropdown"> <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <i class="zmdi zmdi-more"></i> </a>
                                     <ul class="dropdown-menu dropdown-menu-right slideUp">
-                                        <li><a href="admin.php?controller=media&action=add">Thêm media mới</a></li>
+                                        <li><a href="admin.php?controller=media&action=add">Add New Media</a></li>
                                     </ul>
                                 </li>
                                 <li class="remove">
@@ -47,23 +47,23 @@
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Hình ảnh</th>
+                                            <th>Image</th>
                                             <th>Media Name</th>
                                             <th>Slug</th>
-                                            <th>Ngày upload</th>
-                                            <th>Phần mở rộng</th>
-                                            <th>Hành Động</th>
+                                            <th>Upload Date</th>
+                                            <th>Extension</th>
+                                            <th>Actions</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Hình ảnh</th>
+                                            <th>Image</th>
                                             <th>Media Name</th>
                                             <th>Slug</th>
-                                            <th>Ngày upload</th>
-                                            <th>Phần mở rộng</th>
-                                            <th>Hành Động</th>
+                                            <th>Upload Date</th>
+                                            <th>Extension</th>
+                                            <th>Actions</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>

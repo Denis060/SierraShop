@@ -9,13 +9,13 @@ $options = [
 
 $orderComplete = getAll('orders', $options);
 
-$title = 'Đơn hàng đã bị hủy';
+$title = 'Cancelled Orders';
 $orderNav = 'class="active open"';
 $status = [
-    0 => 'Chưa xử lý',
-    1 => 'Đã xử lý',
-    2 => 'Đang xử lý',
-    3 => 'Đã bị hủy',
+    0 => 'Not Processed',
+    1 => 'Processed',
+    2 => 'In Process',
+    3 => 'Cancelled',
 ];
 
 require('admin/views/order/order-cancell.php');

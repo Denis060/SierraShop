@@ -22,8 +22,8 @@ $orderDetail = orderDetail($orderId);
 
 $status = [
     0 => 'Order Confirmed',
-    2 => 'Đang giao hàng',
-    1 => 'Đã giao hàng',
+    2 => 'In Delivery',
+    1 => 'Delivered',
     3 => 'Order Cancelled',
 ];
 require('admin/views/order/view.php');

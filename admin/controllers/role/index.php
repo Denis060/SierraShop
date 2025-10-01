@@ -16,7 +16,7 @@ $url = 'admin.php?controller=role';
 $options = [
     'order_by' => 'id ASC',
 ];
-$title = 'Danh sách quyền truy cập website';
+$title = 'Website Access Permissions List';
 $adminNav = 'class="active open"';
 $roles = getAll('roles', $options);
 

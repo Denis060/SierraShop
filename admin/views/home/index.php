@@ -358,13 +358,13 @@
                                         <table class="table table-bordered">
                                             <thead>
                                                 <tr>
-                                                    <th>Dữ liệu</th>
-                                                    <th>Số liệu Thống kê</th>
+                                                    <th>Data</th>
+                                                    <th>Statistics</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td><i class="zmdi zmdi-case"></i> Sản phẩm mới</td>
+                                                    <td><i class="zmdi zmdi-case"></i> New Products</td>
                                                     <td><?= $total_new_product ?></td>
                                                 </tr>
                                                 <tr>
@@ -372,11 +372,11 @@
                                                     <td><?= $total_sale_product ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><i class="zmdi zmdi-case-play"></i> Sản phẩm nổi bật</td>
+                                                    <td><i class="zmdi zmdi-case-play"></i> Featured Products</td>
                                                     <td><?= $total_hot_product ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><i class="zmdi zmdi-case-check"></i> Sản phẩm mới cập nhật</td>
+                                                    <td><i class="zmdi zmdi-case-check"></i> Recently Updated Products</td>
                                                     <td><?= getTime($product_update['editDate'], gmdate('Y:m:d H:i:s', time() + 7 * 3600)) ?></td>
                                                 </tr>
                                                 <tr>
@@ -434,17 +434,17 @@
                                         <table class="table table-bordered">
                                             <thead>
                                                 <tr>
-                                                    <th>Dữ liệu</th>
-                                                    <th>Số liệu Thống kê</th>
+                                                    <th>Data</th>
+                                                    <th>Statistics</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td><i class="zmdi zmdi-pin-account"></i> User đang online</td>
+                                                    <td><i class="zmdi zmdi-pin-account"></i> Users Online</td>
                                                     <td><?= $users_online_total ?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td><i class="zmdi zmdi-accounts-outline"></i> Tổng User truy cập</td>
+                                                    <td><i class="zmdi zmdi-accounts-outline"></i> Total User Access</td>
                                                     <td><?= $users_online_all ?></td>
                                                 </tr>
                                             </tbody>

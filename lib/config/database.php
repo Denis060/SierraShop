@@ -1,12 +1,36 @@
 <?php
 
-define("DB_HOST", $_ENV['DB_HOST'] ?? 'db_server');
+// Simple .env file loader for Laragon
+if (file_exists(__DIR__ . '/../../.env')) {
+    $env_content = file_get_contents(__DIR__ . '/../../.env');
+    $lines = explode("\n", $env_content);
+    foreach ($lines as $line) {
+        $line = trim($line);
+        if (empty($line) || strpos($line, '#') === 0) continue;
+        if (strpos($line, '=') !== false) {
+            list($key, $value) = explode('=', $line, 2);
+            $key = trim($key);
+            $value = trim($value, "' \"");
+            $_ENV[$key] = $value;
+            putenv("$key=$value");
+        }
+    }
+}
+
+define("DB_HOST", $_ENV['DB_HOST'] ?? 'localhost');
 define("DB_PORT", $_ENV['DB_PORT'] ?? '3306');
 define("DB_USER", $_ENV['DB_USER'] ?? 'root');
-define("DB_PASS", $_ENV['DB_PASS'] ?? 'root');
+define("DB_PASS", $_ENV['DB_PASS'] ?? '');
 define("DB_NAME", $_ENV['DB_NAME'] ?? 'new_mvc_shop_db');
 
-if (isset($_SESSION['user'])) {
+// Start session if not already started
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+// Set userNav with fallback
+$userNav = null;
+if (isset($_SESSION['user']) && isset($_SESSION['user']['id'])) {
     $userNav = $_SESSION['user']['id'];
 }
 
@@ -40,6 +64,11 @@ function connect(): mysqli
         }
 
         $linkConnectDB->set_charset('utf8mb4');
+        
+        // Set timeout and performance settings
+        $linkConnectDB->options(MYSQLI_OPT_CONNECT_TIMEOUT, 10);
+        $linkConnectDB->query("SET SESSION wait_timeout = 300");
+        $linkConnectDB->query("SET SESSION interactive_timeout = 300");
 
         return $linkConnectDB;
 }

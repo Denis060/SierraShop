@@ -14,7 +14,7 @@
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="<?= PATH_URL . 'home' ?>"><i class="zmdi zmdi-home"></i> SierraShop</a></li>
                         <li class="breadcrumb-item"><a href="admin.php?controller=media">Media</a></li>
-                        <li class="breadcrumb-item active">Thêm ảnh mới</li>
+                        <li class="breadcrumb-item active">Add New Image</li>
                     </ul>
                 </div>
                 <div class="col-lg-5 col-md-6 col-sm-12">
@@ -27,7 +27,7 @@
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12">
                     <div class="alert alert-warning" role="alert">
-                        <strong>Bạn đang trong trang upload một hình ảnh mới, Hãy cẩn trọng!!! <a target="_blank" href="#"> Xem tài liệu hướng dẫn</a>
+                        <strong>You are on the page to upload a new image. Be careful!!! <a target="_blank" href="#"> View documentation guide</a>
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                 <span aria-hidden="true"><i class="zmdi zmdi-close"></i></span>
                             </button>
@@ -36,21 +36,21 @@
                         <div class="body">
                             <form id="product-form" class="form-horizontal" method="post" action="admin.php?controller=media&action=add" enctype="multipart/form-data" role="form">
                                 <input name="media_id" type="hidden" value="<?= $mediaInfo ? $mediaInfo['id'] : '0'; ?>" />
-                                <h2 class="card-inside-title" style="font-weight:bold;">Tên ảnh:</h2>
+                                <h2 class="card-inside-title" style="font-weight:bold;">Image Name:</h2>
                                 <div class="row clearfix">
                                     <div class="col-sm-12">
                                         <div class="form-group">
-                                            <input name="name" type="text" value="<?= $mediaInfo ? $mediaInfo['media_name'] : ''; ?>" class="form-control" id="name" placeholder="VD: tanhongit" required="" />
+                                            <input name="name" type="text" value="<?= $mediaInfo ? $mediaInfo['media_name'] : ''; ?>" class="form-control" id="name" placeholder="Example: tanhongit" required="" />
                                         </div>
                                     </div>
                                 </div>
-                                <h2 class="card-inside-title" style="font-weight:bold;">Chọn ngày tạo mới sản phẩm (bắt buộc):</h2>
+                                <h2 class="card-inside-title" style="font-weight:bold;">Select creation date for new product (required):</h2>
                                 <div class="row clearfix">
                                     <div class="col-sm-4">
                                         <input name="createDate" id="createDate" type="date" value="<?= $mediaInfo ? $mediaInfo['createDate'] : date('d/m/Y'); ?>" class="form-control" placeholder="Please choose date & time...">
                                     </div>
                                 </div>
-                                <h2 class="card-inside-title" style="font-weight:bold;">Chọn ảnh bạn muốn upload:</h2>
+                                <h2 class="card-inside-title" style="font-weight:bold;">Select image you want to upload:</h2>
                                 <div class="row clearfix">
                                     <div class="col-sm-12">
                                         <input name="imggggg" type="file" class="form-control dropify">
@@ -58,8 +58,8 @@
                                 </div>
                                 <br><br>
                                 <div class="form-group" style="text-align: center;">
-                                    <button class="btn btn-primary waves-effect" type="submit">Xác nhận upload ảnh</button>
-                                    <a class="btn btn-warning waves-effect" href="admin.php?controller=media">Trở về</a>
+                                    <button class="btn btn-primary waves-effect" type="submit">Confirm Upload Image</button>
+                                    <a class="btn btn-warning waves-effect" href="admin.php?controller=media">Go Back</a>
                                 </div>
                             </form>
                         </div>

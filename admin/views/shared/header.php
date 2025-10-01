@@ -1,7 +1,18 @@
 <?php
-$contacts = getRecord('contacts', 1);
+// Add error handling for database queries
+try {
+    $contacts = getRecord('contacts', 1);
+} catch (Exception $e) {
+    $contacts = ['favicon' => 'favicon.ico']; // Default fallback
+}
+
 global $userNav;
-$userInfoNav = getRecord('users', $userNav) ?>
+try {
+    $userInfoNav = isset($userNav) ? getRecord('users', $userNav) : null;
+} catch (Exception $e) {
+    $userInfoNav = null; // Fallback if user not found
+}
+?>
 <!doctype html>
 <html class="no-js " lang="en">
 

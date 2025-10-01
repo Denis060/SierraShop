@@ -14,7 +14,7 @@ if (isset($_GET['media_id'])) {
     $mediaId = 0;
 }
 
-$title = ($mediaId == 0) ? '' : 'Cập nhật ảnh';
+$title = ($mediaId == 0) ? '' : 'Update Image';
 $navMedia = 'class="active open"';
 $mediaInfo = getRecord('media', $mediaId);
 

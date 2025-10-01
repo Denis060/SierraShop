@@ -7,7 +7,7 @@ require_once('admin/models/users.php');
 $options = [
     'order_by' => 'id ASC',
 ];
-$title = 'Danh sách Admin';
+$title = 'Admin List';
 $adminNav = 'class="active open"';
 $list_user = getAll('users', $options);
 

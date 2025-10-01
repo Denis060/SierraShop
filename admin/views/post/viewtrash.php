@@ -59,8 +59,8 @@
                                             <td class="hidden-md-down">
                                                 <?php $user = getRecord('users', $post['post_author']); ?>
                                                 <ul class="list-unstyled team-info margin-0">
-                                                    <li><?= $user['user_name'] ?> </li>
-                                                    <li><img src="public/upload/images/<?= $user['user_avatar'] ?>" alt="Avatar"></li>
+                                                    <li><?= $user ? $user['user_name'] : 'Unknown User' ?> </li>
+                                                    <li><img src="public/upload/images/<?= $user && $user['user_avatar'] ? $user['user_avatar'] : 'default-avatar.png' ?>" alt="Avatar"></li>
                                                 </ul>
                                             </td>
                                             <td>
@@ -68,8 +68,8 @@
                                             </td>
                                             <td><span class="badge badge-info"></span></td>
                                             <td>
-                                                <a onclick="return confirm('Are you sure to delete?')" title="Delete" class="btn btn-danger btn-round" href="admin.php?controller=post&action=delete&post_id=<?= $post['id'] ?>"> <i class="zmdi zmdi-delete"></i> Xóa vĩnh viễn</a>
-                                                <a title="Restore" class="btn btn-success btn-round" href="admin.php?controller=post&action=restore&post_id=<?= $post['id'] ?>"> <i class="zmdi zmdi-refresh-sync"></i> Phục hồi</a>
+                                                <a onclick="return confirm('Are you sure to delete?')" title="Delete" class="btn btn-danger btn-round" href="admin.php?controller=post&action=delete&post_id=<?= $post['id'] ?>"> <i class="zmdi zmdi-delete"></i> Delete Permanently</a>
+                                                <a title="Restore" class="btn btn-success btn-round" href="admin.php?controller=post&action=restore&post_id=<?= $post['id'] ?>"> <i class="zmdi zmdi-refresh-sync"></i> Restore</a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

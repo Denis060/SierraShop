@@ -2,7 +2,7 @@
 
 permission_user();
 
-$title = 'Đơn hàng chưa xử lý';
+$title = 'Unprocessed Orders';
 $orderNav = 'class="active open"';
 
 require('admin/views/order/order-noprocess.php');

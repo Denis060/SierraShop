@@ -92,8 +92,8 @@
                                             </div>
                                         </div>
                                         <div class="form-group" style="text-align: center;">
-                                            <button class="btn btn-primary waves-effect" type="submit"><?= $post ? 'Cập nhật lại bài viết' : 'Thêm bài viết mới'; ?></button>
-                                            <a class="btn btn-warning waves-effect" href="admin.php?controller=post">Trở về</a>
+                                            <button class="btn btn-primary waves-effect" type="submit"><?= $post ? 'Update Post' : 'Add New Post'; ?></button>
+                                            <a class="btn btn-warning waves-effect" href="admin.php?controller=post">Go Back</a>
                                         </div>
                                     </div>
                                 </div>

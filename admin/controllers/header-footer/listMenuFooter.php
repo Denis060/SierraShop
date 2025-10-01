@@ -7,7 +7,7 @@ $linkOptions = [
     'order_by' => 'id ASC',
     'where' => 'parent=0',
 ];
-$title = 'Danh sách link Footer';
+$title = 'Footer Links List';
 $navHF = 'class="active open"';
 $menuFooterLinks = getAll('menu_footers', $linkOptions);
 $titleOptions = [

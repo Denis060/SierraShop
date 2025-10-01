@@ -59,8 +59,8 @@
                                             <td class="hidden-md-down">
                                                 <?php $user = getRecord('users', $page['post_author']); ?>
                                                 <ul class="list-unstyled team-info margin-0">
-                                                    <li><?= $user['user_name'] ?> </li>
-                                                    <li><img src="public/upload/images/<?= $user['user_avatar'] ?>" alt="Avatar"></li>
+                                                    <li><?= $user ? $user['user_name'] : 'Unknown User' ?> </li>
+                                                    <li><img src="public/upload/images/<?= $user && $user['user_avatar'] ? $user['user_avatar'] : 'default-avatar.png' ?>" alt="Avatar"></li>
                                                 </ul>
                                             </td>
                                             <td>

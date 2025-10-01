@@ -1,9 +1,26 @@
 <?php
-$options = [
-    'where' => 'product_typeid = 3',
-    'order_by' => 'createDate',
-];
-$products = getAll('products', $options); ?>
+// Add error handling and limit for performance
+error_log("Starting sale products query...");
+$start_time = microtime(true);
+
+try {
+    $options = [
+        'where' => 'product_typeid = 3',
+        'order_by' => 'createDate DESC',
+        'limit' => '20'  // Limit to 20 products for faster loading
+    ];
+    $products = getAll('products', $options);
+    
+    $end_time = microtime(true);
+    $execution_time = $end_time - $start_time;
+    error_log("Sale products query completed in: " . $execution_time . " seconds");
+    error_log("Number of sale products retrieved: " . count($products));
+    
+} catch (Exception $e) {
+    error_log("Error in sale products query: " . $e->getMessage());
+    $products = [];
+}
+?>
 <!-- Basic Examples -->
 <div class="row clearfix">
     <div class="col-lg-12">
@@ -23,7 +40,7 @@ $products = getAll('products', $options); ?>
             </div>
             <div class="body">
                 <div class="table-responsive">
-                    <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                    <table class="table table-bordered table-striped table-hover">
                         <thead>
                             <tr>
                                 <th>ID</th>
